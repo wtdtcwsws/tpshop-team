@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 * CoreUI - Free Bootstrap Admin Template
 * @version v2.1.14
@@ -138,7 +138,7 @@
 		<div class="app-body">
 			<div class="sidebar">
 				<nav class="sidebar-nav">
-					<ul class="nav">
+					<ul class="nav ">
 						<li class="nav-item">
 							<a class="nav-link" href="main.html">
 								<i class="nav-icon cui-home"></i> TP主页
@@ -149,12 +149,12 @@
 						<li class="nav-title">导航</li>
 						<!-- 一级菜单 -->
 						<!-- 设置导航栏 -->
-						<li class="nav-item nav-dropdown">
+						<li class="nav-item nav-dropdown nav-title">
 							<a class="nav-link nav-dropdown-toggle" href="#">
 								<i class="nav-icon cui-cog "></i> 设置</a>
 							<!-- 二级菜单 -->
-							<ul class="nav-dropdown-items">
-								<li class="nav-item nav-dropdown">
+							<ul class="nav-dropdown-items ">
+								<li class="nav-item nav-dropdown nav-title">
 									<a class="nav-link nav-dropdown-toggle" href="#">
 										<i class="nav-icon cui-screen-desktop"></i>系统</a>
 									<!-- 三级菜单 -->
@@ -169,7 +169,7 @@
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>消息通知
+											<a class="nav-link" href="new.html"><i class="nav-icon icon-puzzle"></i>消息通知
 											</a>
 										</li>
 										<li class="nav-item ">
@@ -191,10 +191,10 @@
 								</li>
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-drop "></i>支付</a>
+										<i class="nav-icon fa fa-credit-card   "></i>支付</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>支付配置
+											<a class="nav-link" href="wpayconfig.html"><i class="nav-icon cui-wrench"></i>支付配置
 											</a>
 										</li>
 									</ul>
@@ -204,19 +204,19 @@
 										<i class="nav-icon icon-puzzle"></i>权限</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>管理员列表
+											<a class="nav-link" href="wAdminManage.html"><i class="nav-icon icon-puzzle"></i>管理员列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>角色管理
+											<a class="nav-link" href="wroleManage.html"><i class="nav-icon icon-puzzle"></i>角色管理
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>权限资源
+											<a class="nav-link" href="w-right-manage.html"><i class="nav-icon icon-puzzle"></i>权限资源
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>供应商列表
+											<a class="nav-link" href="w-supplier-list.html"><i class="nav-icon icon-puzzle"></i>供应商列表
 											</a>
 										</li>
 									</ul>
@@ -517,7 +517,7 @@
 				
 				<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 			</div>
-			<main class="main">
+			<main class="main bg-white">
 				<!-- Breadcrumb-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">Home</li>
@@ -538,7 +538,7 @@
 						</div>
 					</li>
 				</ol>
-				<div class="container-fluid">
+				<div class="container-fluid ">
 					<div id="ui-view"></div>
 				</div>
 			</main>
@@ -856,6 +856,8 @@
 		<script src="vendors/pace-progress/js/pace.min.js"></script>
 		<script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
 		<script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+		
+		<script src="js/ajaxLoad-additional.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			$('#ui-view').ajaxLoad();
 			$(document).ajaxComplete(function() {

@@ -1,0 +1,78 @@
+<div class="animated fadeIn">
+	<div class="row">
+		<div class="col-1">
+			<a class="btn  btn-primary " style="margin-bottom: 15px ;border-radius:50%;" role="button" href="wroleManage.html"
+			 data-toggle="ajaxLoad" data-target="#ui-view"><i class="fa fa-arrow-left"></i></a>
+		</div>
+		<div class="col-8">
+			<h4>管理员 - 编辑角色 <small class="text-muted"> 网站系统角色管理 </small></h4>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header">
+			<strong>添加角色</strong></div>
+		<div class="card-body">
+			<form class="form-horizontal" action="" method="post">
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						角色名称 </label>
+					<div class="col-md-6">
+						<input class="form-control" id="name" type="text" name="name" placeholder="" autocomplete="email">
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"> 角色描述 </label>
+					<div class="col-md-6">
+						<textarea class="form-control" rows="6"></textarea>
+					</div>
+				</div>
+				<hr>
+				<!-- 复选框 -->
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name">权限分配 </label>
+					<div class="col-md-9 col-form-label">
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox1" type="checkbox" value="check1">
+							<label class="form-check-label" for="inline-checkbox1">内容管理</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox2" type="checkbox" value="check2">
+							<label class="form-check-label" for="inline-checkbox2">系统设置</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+							<label class="form-check-label" for="inline-checkbox3">会员中心</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+							<label class="form-check-label" for="inline-checkbox3">营销推广</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+							<label class="form-check-label" for="inline-checkbox3">订单中心</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+							<label class="form-check-label" for="inline-checkbox3">插件工具</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+							<label class="form-check-label" for="inline-checkbox3">统计报表</label>
+						</div>
+						<div class="form-check form-check-inline mr-1">
+							<input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+							<label class="form-check-label" for="inline-checkbox3">分销中心</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="card-footer ">
+			<div class="offset-3">
+				<a class="btn  btn-primary" role="button" href="wroleManage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+<div class="animated fadeIn">
+	<h4>角色管理 <small class="text-muted"> 网站系统角色管理 </small></h4>
+	<div class="card">
+		<div class="card-header">
+			<i class="fa fa-align-justify"></i> 角色列表</div>
+		<div class="card-body">
+			<table class="table table-responsive-sm table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>角色名称</th>
+						<th>描述</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5">
+							<a class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view" role="button" href="waddroleManage.html"><i
+								 class="fa fa-plus"> 添加角色</i></a>
+						</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>文章管理</td>
+						<td>文章管理</td>
+						<td>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view" role="button"><i
+								 class="fa fa-edit"></i>编辑</a>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" data-toggle="modal" data-target="#smallModal"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>加盟商</td>
+						<td>加盟商查看管理订单</td>
+						<td>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view" role="button"><i
+								 class="fa fa-edit"></i>编辑</a>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" ></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>运营专员</td>
+						<td>负责维护商品活动推广</td>
+						<td>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view" role="button"><i
+								 class="fa fa-edit"></i>编辑</a>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" ></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>仓管员</td>
+						<td>仓管员</td>
+						<td>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view" role="button"><i
+								 class="fa fa-edit"></i>编辑</a>
+							<a href="waddroleManage.html" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" ></i>删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="#">上一页</a>
+				</li>
+				<li class="page-item active">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">下一页</a>
+				</li>
+			</ul>
+			<!-- 模态框 -->
+			<div class="modal fade " id="smallModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-modal="true"
+			 style="padding-right: 16px; display: none;"aria-hidden="true">
+				<div class="modal-dialog modal-sm" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">确认删除</h4>
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>确认要删除吗</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+							<button class="btn btn-primary" type="button" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+					<!-- /.modal-content-->
+				</div>
+				<!-- /.modal-dialog-->
+			</div>
+		</div>
+	</div>
+</div>

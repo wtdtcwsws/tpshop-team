@@ -1,0 +1,115 @@
+<div class="animated fadeIn">
+	<h4>权限资源管理 <small class="text-muted"> 网站系统权限资源管理 </small></h4>
+	<div class="card">
+		<div class="card-header">
+			
+			<!-- 搜索框 -->
+			<div class="form-group m-0"><i class="fa fa-align-justify"></i> 权限资源列表
+			  <!-- <label class="col-form-label" for="appendedInputButtons">Two-button append</label> -->
+			  <div class="controls row">
+			    <div class="input-group col-3 offset-9 ">
+			      <input class="form-control" id="appendedInputButtons" size="4" type="text">
+			      <span class="input-group-append">
+			        <button class="btn btn-secondary" type="button">搜索</button>
+			      </span>
+			    </div>
+			  </div>
+			</div>
+			
+		</div>
+			
+		<div class="card-body">
+			<table class="table table-responsive-sm table-bordered">
+				<thead>
+					<tr>
+						<th>名称</th>
+						<th>资源类型</th>
+						<th>所属分组</th>
+						<th>权限码</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5">
+							<a class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view" role="button" href="w-add-right-Manage.html"><i
+								 class="fa fa-plus"> 添加权限</i></a>
+						</td>
+					</tr>
+					<tr>
+						<td>手机模板装修</td>
+						<td>平台后台</td>
+						<td>系统设置</td>
+						<td>Block@index,Block@get_flash,Block@pageList,Block@goods_list_block,Block@ajaxGood</td>
+						<td>
+							<a href="w-add-right-Manage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view"
+							 role="button"><i class="fa fa-edit"></i>编辑</a>
+							<a href="#" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" data-toggle="modal" data-target="#smallModal"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>自定义手机模板</td>
+						<td>平台后台</td>
+						<td>系统设置</td>
+						<td>Block@index,Block@add_data,Block@ajaxreturn_block</td>
+						<td>
+							<a href="w-add-right-Manage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view"
+							 role="button"><i class="fa fa-edit"></i>编辑</a>
+							<a href="#" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" data-toggle="modal" data-target="#smallModal"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>虚拟订单</td>
+						<td>平台后台</td>
+						<td>订单中心</td>
+						<td>Order@virtual_list,Order@virtual_info,Order@virtual_cancel,Order@generateVirtualCode,Order@verify_code</td>
+						<td>
+							<a href="w-add-right-Manage.html" class="btn  btn-outline-primary btn-sm" data-toggle="ajaxLoad" data-target="#ui-view"
+							 role="button"><i class="fa fa-edit"></i>编辑</a>
+							<a href="#" class="btn  btn-outline-primary btn-sm" data-toggle="modal" data-target="#smallModal" role="button"><i
+								 class="fa fa-trash" data-toggle="modal" data-target="#smallModal"></i>删除</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="#">上一页</a>
+				</li>
+				<li class="page-item active">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">下一页</a>
+				</li>
+			</ul>
+			<div class="modal fade " id="smallModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-modal="true"
+			 style="padding-right: 16px; display: none;" aria-hidden="true">
+				<div class="modal-dialog modal-sm" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">确认删除</h4>
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>确认要删除吗</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+							<button class="btn btn-primary" type="button" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+					<!-- /.modal-content-->
+				</div>
+				<!-- /.modal-dialog-->
+			</div>
+		</div>
+	</div>
+</div>

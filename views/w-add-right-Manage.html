@@ -1,0 +1,123 @@
+<div class="animated fadeIn">
+	<div class="row">
+		<div class="col-1">
+			<a class="btn  btn-primary " style="margin-bottom: 15px ;border-radius:50%;" role="button" href="w-right-manage.html"
+			 data-toggle="ajaxLoad" data-target="#ui-view"><i class="fa fa-arrow-left"></i></a>
+		</div>
+		<div class="col-8">
+			<h4>权限资源管理 - 编辑权限 <small class="text-muted"> 网站系统权限资源管理 </small></h4>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header">
+			<strong>编辑权限 </strong></div>
+		<div class="card-body">
+			<form class="form-horizontal " action="" method="post">
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						所属类型 </label>
+					<div class="col-md-2">
+						<select class="form-control" id="select1" name="select1">
+							<option value="0">平台后台 - admin</option>
+						</select>
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						权限资源名称 </label>
+					<div class="col-md-3">
+						<input class="form-control" id="name" type="text" name="name">
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						所属分组 </label>
+					<div class="col-md-2 ">
+						<select class="form-control" id="select1" name="select1">
+							<option value="system">系统设置</option>
+							<option value="content">内容管理</option>
+							<option value="goods">商品中心</option>
+							<option value="member">会员中心</option>
+							<option value="finance">财务管理</option>
+							<option value="order">订单中心</option>
+							<option value="marketing">营销推广</option>
+							<option value="tools">插件工具</option>
+							<option value="count">统计报表</option>
+							<option value="distribut">分销中心</option>
+							<option value="weixin">微信管理</option>
+						</select>
+						<span class="help-block offset-1 " style="color: #777;">所属角色</span>
+					</div>
+				</div>
+				<hr >
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						添加权限码 </label>
+					<div class="col-md-2 ">
+						<select class="form-control" id="select1" name="select1">
+							<option value="">选择控制器</option>
+							<option value="MessageTemplate">MessageTemplate</option>
+							<option value="Sso">Sso</option>
+							<option value="Comment">Comment</option>
+							<option value="Miniapp">Miniapp</option>
+							<option value="Ad">Ad</option>
+							<option value="ShopOrder">ShopOrder</option>
+							<option value="Shop">Shop</option>
+							<option value="Block">Block</option>
+							<option value="Wechat">Wechat</option>
+							<option value="Base">Base</option>
+							<option value="Team">Team</option>
+							<option value="Promotion">Promotion</option>
+							<option value="Template">Template</option>
+							<option value="Order">Order</option>
+							<option value="Ueditor">Ueditor</option>
+							<option value="Topic">Topic</option>
+							<option value="SmsTemplate">SmsTemplate</option>
+							<option value="User">User</option>
+							<option value="Invoice">Invoice</option>
+							<option value="PreSell">PreSell</option>
+							<option value="App">App</option>
+							<option value="UpgradeLogic">UpgradeLogic</option>
+							<option value="Shipping">Shipping</option>
+							<option value="Plugin">Plugin</option>
+							<option value="Index">Index</option>
+							<option value="Api">Api</option>
+							<option value="System">System</option>
+							<option value="Uploadify">Uploadify</option>
+							<option value="Freight">Freight</option>
+							<option value="MobileApp">MobileApp</option>
+							<option value="Article">Article</option>
+							<option value="IntegralMall">IntegralMall</option>
+							<option value="index.html">index.html</option>
+							<option value="News">News</option>
+							<option value="Wx3rd">Wx3rd</option>
+							<option value="Goods">Goods</option>
+							<option value="Tools">Tools</option>
+							<option value="Combination">Combination</option>
+							<option value="Admin">Admin</option>
+							<option value="Import">Import</option>
+							<option value="Coupon">Coupon</option>
+							<option value="Report">Report</option>
+						</select>
+					</div>
+				</div>
+				<hr >
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						权限码 </label>
+					<div class="col-md-3">
+						<input class="form-control" id="name" type="text" name="name" placeholder="权限码">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="card-footer ">
+			<div class="offset-3">
+				<a class="btn  btn-primary" role="button" href="w-right-manage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+			</div>
+		</div>
+	</div>
+</div>
