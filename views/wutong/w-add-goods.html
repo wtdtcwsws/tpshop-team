@@ -1,0 +1,317 @@
+<script src="js/wt/w-goods-manage.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+	.help-block {
+		color: #777;
+		font-size: 0.75rem;
+	}
+</style>
+<div class="animated fadeIn">
+	<div class="row">
+		<div class="col-1">
+			<a class="btn  btn-primary " style="margin-bottom: 15px ;border-radius:50%;" role="button" href="wutong/w-goods-manage.html"
+			 data-toggle="ajaxLoad" data-target="#ui-view"><i class="fa fa-arrow-left"></i></a>
+		</div>
+		<div class="col-8">
+			<h4>商品设置 <small class="text-muted"> 商品基本信息设置 </small></h4>
+		</div>
+		<div class="card-body col-12 p-0">
+			<div class="card  p-0">
+				<div class="card-header  ">
+					<i class="fa fa-align-justify"></i> 商品信息
+				</div>
+				<ul class="nav nav-tabs " id="myTab1" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+						 aria-selected="true">通用信息</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+						 aria-selected="false">商品相册</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+						 aria-selected="false">商品模型</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="last-tab" data-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">积分折扣</a>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTab1Content">
+					<div class="tab-pane fade active show p-0" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<div class="card">
+							<div class="card-header">
+								<strong>商品添加</strong></div>
+							<div class="card-body">
+								<form class="form-horizontal">
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											商品名称 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											商品分类 </label>
+										<div class="input-group col-6">
+											<select class="form-control form-control col-4 " id="select1" name="select3">
+												<option value="0">请选择商品分类</option>
+												<option value="12">
+													服饰 </option>
+												<option value="30">
+													家居 </option>
+												<option value="31">
+													手机 </option>
+												<option value="37">
+													电脑 </option>
+												<option value="52">
+													电器 </option>
+												<option value="55">
+													食品 </option>
+												<option value="56">
+													鞋类 </option>
+												<option value="59">
+													艺术 </option>
+												<option value="61">
+													户外 </option>
+												<option value="83">
+													图书 </option>
+											</select>
+											<select class="form-control form-control col-4 " id="select2" name="select3">
+												<option value="0">请选择商品分类</option>
+												<option value="13">女装</option>
+												<option value="23">男装</option>
+												<option value="26">内衣</option>
+												<option value="27">配饰</option>
+												<option value="28">童装</option>
+											</select>
+											<select class="form-control form-control col-4" id="select3" name="select3">
+												<option value="0">请选择商品分类</option>
+												<option value="24">当季热卖</option>
+												<option value="25">新品推荐</option>
+												<option value="29">加绒裤</option>
+												<option value="198">T恤</option>
+												<option value="199">牛仔裤</option>
+												<option value="200">休闲裤</option>
+												<option value="201">衬衫</option>
+											</select>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row ">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											商品介绍 </label>
+										<div class="col-md-6 ">
+											<textarea class="form-control col-6" id="name" type="text" name="name"></textarea>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											商品货号 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											SPU </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											SKU </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											商品品牌 </label>
+										<div class="col-md-6">
+											<select class="form-control form-control-sm col-4 " id="select3" name="select3">
+												<option value="">所有品牌</option>
+												<option value="9">A -- 安踏</option>
+												<option value="11">A -- 阿迪达斯</option>
+												<option value="12">H -- 花花公子</option>
+												<option value="15">N -- 耐克</option>
+											</select>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											供应商 </label>
+										<div class="col-md-9">
+											<select class="form-control form-control-sm col-4 " id="select3" name="select3">
+												<option value="0">不指定供应商属于本店商品</option>
+												<option value="1">
+													蒂娜服饰 </option>
+												<option value="2">
+													玉田零食 </option>
+												<option value="3">
+													旺仔小馒头食品店 </option>
+												<option value="4">
+													三诺电子器有限公司 </option>
+											</select>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											本店售价 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											市场价 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											成本价 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											图片上传 </label>
+										<div class="input-group  col-md-6 ">
+											<input class="form-control col-md-4 " id="appendedInputButtons" size="4" type="text">
+											<span class="input-group-append">
+												<input class="btn btn-primary" type="button" value="选择上传...">
+											</span>
+
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											视频上传 </label>
+										<div class="input-group  col-md-6 ">
+											<input class="form-control col-md-4 " id="appendedInputButtons" size="4" type="text">
+											<span class="input-group-append">
+												<input class="btn btn-primary" type="button" value="选择上传...">
+											</span>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											商品重量 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block offset">务必设置商品重量, 用于计算物流费.以克为单位</span>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											商品体积 </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block offset">务必设置商品体积, 用于计算物流费.以立方米为单位</span>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											是否包邮 </label>
+										<div class="col-md-6">
+											<label class="switch switch-label switch-success m-0 pt-1">
+												<input class="switch-input" type="checkbox" checked="">
+												<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+											</label>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											总库存 </label>
+										<div class="col-md-6">
+											<input class="form-control col-4" id="name" type="text" name="name" value="100">
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											商品关键词   </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block offset">多个关键词，用空格隔开</span>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											是否为虚拟商品 </label>
+										<div class="col-md-6">
+											<label class="switch switch-label switch-success m-0 pt-1">
+												<input class="switch-input" type="checkbox" checked="">
+												<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+											</label>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											虚拟销售量   </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block offset">虚拟销售量（请输入0~9999999）：虚拟销售量 + 真实销量</span>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											虚拟收藏量   </label>
+										<div class="col-md-6">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block offset">虚拟收藏量（请输入0~9999999）：虚拟收藏量 + 真实收藏量</span>
+										</div>
+									</div>
+									<hr>
+									<div class="form-group row ">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
+											商品详情描述 </label>
+										<div class="col-md-8 ">
+											<textarea class="form-control " rows="10" id="name" type="text" name="name"></textarea>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer ">
+								<div class="offset-3">
+									<a class="btn  btn-primary" role="button" href="wutong/w-goods-manage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade p-0" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+						第二个面板
+					</div>
+					<div class="tab-pane fade p-0" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+						第三个面板
+					</div>
+					<div class="tab-pane fade p-0" id="last" role="tabpanel" aria-labelledby="last-tab">
+						第四个面板
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

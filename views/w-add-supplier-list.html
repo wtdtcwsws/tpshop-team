@@ -1,3 +1,9 @@
+<style type="text/css">
+	.help-block {
+		color: #777;
+		font-size: 0.75rem;
+	}
+</style>
 <div class="animated fadeIn">
 	<div class="row">
 		<div class="col-1">
@@ -10,53 +16,58 @@
 	
 	<div class="card">
 		<div class="card-header">
-			<strong>网站系统管理员添加</strong></div>
+			<strong>供应商管理添加</strong></div>
 		<div class="card-body">
 			<form class="form-horizontal" action="" method="post">
 				<div class="form-group row">
-					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 用户名 </label>
-					<div class="col-md-6">
-						<input class="form-control" id="name" type="text" name="name" placeholder="请输入用户名" autocomplete="email">
-						<span class="help-block offset-1">用户名</span>
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 供应商名称 </label>
+					<div class="col-md-4">
+						<input class="form-control" id="name" type="text" name="name"  >
+						<span class="help-block offset-1">供应商名称</span>
 					</div>
 				</div>
 				<hr>
 				<div class="form-group row">
-					<label class="col-md-2 col-form-label offset-1 text-right" for="hf-email"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> Email地址 </label>
-					<div class="col-md-6">
-						<input class="form-control" id="hf-email" type="email" name="hf-email" placeholder="请输入Email地址" autocomplete="email">
-						<span class="help-block offset-1">Email地址</span>
+					<label class="col-md-2 col-form-label offset-1 text-right" for=""><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 供应商描述 </label>
+					<div class="col-md-4">
+						<input class="form-control" id="" type="text" name=""  >
+						<span class="help-block offset-1">供应商描述</span>
 					</div>
 				</div>
 				<hr>
 				<div class="form-group row">
-					<label class="col-md-2 col-form-label offset-1 text-right" for="hf-password"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 登陆密码</label>
-					<div class="col-md-6">
-						<input class="form-control" id="hf-password" type="password" name="hf-password" placeholder="请输入密码" autocomplete="current-password">
-						<span class="help-block offset-1">登陆密码</span>
+					<label class="col-md-2 col-form-label offset-1 text-right" for=""><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 供应商联系人</label>
+					<div class="col-md-4">
+						<input class="form-control" id="" type="text" name="" placeholder="" >
+						<span class="help-block offset-1">供应商联系人</span>
 					</div>
 				</div>
-	
+				<hr>
 				<div class="form-group row">
-					<label class="col-md-2 col-form-label offset-1 text-right"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 所属角色</label>
-					<div class="col-md-6">
+					<label class="col-md-2 col-form-label offset-1 text-right" for=""><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 供应商电话</label>
+					<div class="col-md-4">
+						<input class="form-control" id="" type="text" name="" placeholder="" >
+						<span class="help-block offset-1">供应商电话</span>
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i> 分配管理员账号</label>
+					<div class="col-md-4">
 						<select class="form-control form-control-sm col-4 " id="select3" name="select3">
-							<option value="1">超级管理员</option>
-							<option value="2">编辑</option>
-							<option value="4">客服</option>
-							<option value="6">仓管员</option>
-							<option value="9">运营专员</option>
-							<option value="10">加盟商</option>
-							<option value="11">文章管理</option>
+							<option value="1">12</option>
+							<option value="2">admin</option>
+							<option value="4">tpshop</option>
+							<option value="6">test</option>
 						</select>
-						<span class="help-block offset-1">所属角色</span>
+						<span class="help-block offset-1">所属管理员</span>
 					</div>
 				</div>
 			</form>
 		</div>
 		<div class="card-footer ">
 			<div class="offset-3">
-				<a class="btn  btn-primary" role="button" href="wAdminManage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+				<a class="btn  btn-primary" role="button" href="w-supplier-list.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
 			</div>
 		</div>
 	</div>

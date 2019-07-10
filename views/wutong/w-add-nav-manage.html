@@ -1,0 +1,77 @@
+<style type="text/css">
+	.help-block {
+		color: #777;
+		font-size: 0.75rem;
+	}
+</style>
+<div class="animated fadeIn">
+	<div class="row">
+		<div class="col-1">
+			<a class="btn  btn-primary " style="margin-bottom: 15px ;border-radius:50%;" role="button" href="wutong/w-nav-manage.html"
+			 data-toggle="ajaxLoad" data-target="#ui-view"><i class="fa fa-arrow-left"></i></a>
+		</div>
+		<div class="col-8">
+			<h4>自定义导航 - 编辑导航 <small class="text-muted"> 网站系统自定义导航与管理 </small></h4>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header">
+			<strong>添加导航</strong></div>
+		<div class="card-body">
+			<form class="form-horizontal" action="" method="post">
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						导航位置 </label>
+					<div class="col-md-4">
+						<select class="form-control form-control-sm col-4 " id="select3" name="select3">
+							<option value="1">导航顶部</option>
+							<option value="2">导航底部</option>
+						</select>
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						系统内容 </label>
+					<div class="col-md-4">
+						<select class="form-control form-control-sm col-4 " id="select3" name="select3">
+							<option value="1">自定义导航</option>
+							<option value="2">tpshop官网</option>
+						</select>
+						<span class="help-block offset-1">自定义导航</span>
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						导航名称 </label>
+					<div class="col-md-4">
+						<input class="form-control col-6" id="name" type="text" name="name">
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						链接 </label>
+					<div class="col-md-4">
+						<input class="form-control col-6" id="name" type="text" name="name">
+					</div>
+				</div>
+				<hr>
+				<div class="form-group row">
+					<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+						排序 </label>
+					<div class="col-md-4">
+						<input class="form-control col-6" id="name" type="text" name="name">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="card-footer ">
+			<div class="offset-3">
+				<a class="btn  btn-primary" role="button" href="wroleManage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+			</div>
+		</div>
+	</div>
+</div>
