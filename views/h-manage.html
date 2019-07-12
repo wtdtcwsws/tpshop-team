@@ -1,0 +1,203 @@
+<style>
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	.container-fluid>.content{
+		padding: 10px;
+		width: 100%;
+		background-color: white;
+		padding-top: 30px;
+	}
+	.container-fluid>.row{
+		height: 50px;
+	}
+	.content>.row{
+		padding-left: 10px;
+		margin-top: 15px;
+	}
+	.content-1{
+		font-size: 15px;
+	}
+	.content-2{
+		font-size: 10px;
+		font-weight: 400;
+		color: #818182;
+	}
+
+	.chaxun1{
+		width: 200px;
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 430px;
+	}
+	[name="chaxun2"]{
+		
+		width: 250px;
+	}
+	.hang button{
+		height: 25px;
+		width: 70px;
+		font-size: 13px;
+		margin: 0 5px 0 5px;
+		padding: 0;
+	}
+</style>
+<div class="animated fadeIn">
+	<div class="container-fluid">
+
+		<div class="row">
+			<div>
+				<span class="shop-set-1">
+					快递公司管理
+				</span>
+				<span class="shop-set-2">
+					快递公司列表与管理
+				</span>
+			</div>
+		</div>
+		<div class="content">
+
+			<!-- 提示弹框按钮 -->
+			<div class="alert alert-info alert-dismissible fade show" role="alert">
+				<strong style="font-size: 20px;">操作提示</strong>
+				<table>
+					<ul>
+						<li>快递公司管理, 由总平台设置管理。</li>
+						<li>快递打印模板编辑快递公司可进行设置, 设置必须上传快递单据背景图。</li>
+						<li>如果物流配置启用的是快递鸟，物流公司编码也要改为快递鸟官方物流公司编码。</li>
+					</ul>
+				</table>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<!-- 网页中部 -->
+			<div class="row">
+				<div class="col-2">
+					<span class="content-1">快递公司列表</span>
+					<span class="content-2">（共2条记录）</span>
+				</div>
+				<div class="col-1" style="position: relative;top: -19px;">
+					<a href="#" title="刷新数据">
+						<i class="fa fa-refresh fa-lg mt-4 "></i>
+					</a>
+				</div>
+				
+				<div class="chaxun1">
+					<input class="form-control" size="16" type="text" placeholder="快递公司名称">
+				</div>
+				<div class="chaxun">
+					<div class="input-group" name="chaxun2">
+						
+						<input class="form-control" size="16" type="text" placeholder="物流编号">
+						<span class="input-group-append">
+							<button class="btn btn-secondary" type="button">搜索</button>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- 网页主体表格 -->
+			<table class="table table-hover text-center table-bordered">
+				
+					<tr class="alert-secondary">
+						<td><i class="fa fa-star-o fa-lg"></i></td>
+						<th>物流公司名称</th>
+						<th>快递公司编码</th>
+						<th>开启状态</th>
+						<th>操作</th>
+						<th style="width: 600px;"></th>
+					</tr>
+				
+			
+					<tr>
+						<td colspan="6" class="text-left">
+							<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-manage-two.html"><button class="btn btn-outline-primary" type="button"><i class="fa fa-plus fa-lg"></i> 新增快递公司</button></a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td><i class="fa fa-star-o fa-lg"></i></td>
+						<td>中国邮政</td>
+						<td>YZPY</td>
+						<td style="padding: 0;padding-top: 12px;">
+							<label class="switch switch-label switch-pill switch-info" style="margin: 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="开启" data-unchecked="关闭"></span>
+							</label>
+						</td>
+						<td class="hang">
+							<button class="btn btn-ghost-dark" type="button">
+								<i class="icons font-1xl cui-magnifying-glass"></i>
+								编辑
+							</button>
+							<button class="btn btn-ghost-dark" type="button">
+								<i class="icons font-1xl cui-trash"></i>
+								删除
+							</button>
+						</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td><i class="fa fa-star-o fa-lg"></i></td>
+						<td>中通快递</td>
+						<td>ZTO</td>
+						<td style="padding: 0;padding-top: 12px;">
+							<label class="switch switch-label switch-pill switch-info" style="margin: 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="开启" data-unchecked="关闭"></span>
+							</label>
+						</td>
+						<td class="hang">
+							<button class="btn btn-ghost-dark" type="button">
+								<i class="icons font-1xl cui-magnifying-glass"></i>
+								编辑
+							</button>
+							<button class="btn btn-ghost-dark" type="button">
+								<i class="icons font-1xl cui-trash"></i>
+								删除
+							</button>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+</div>

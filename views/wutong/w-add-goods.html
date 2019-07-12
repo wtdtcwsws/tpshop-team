@@ -1,8 +1,14 @@
-<script src="js/wt/w-goods-manage.js" type="text/javascript" charset="utf-8"></script>
 <style type="text/css">
 	.help-block {
 		color: #777;
 		font-size: 0.75rem;
+	}
+	.help-inline{
+		color: #777;
+		font-size: 0.75rem;
+		line-height: 2.1875rem;
+		padding: 0;
+		vertical-align: middle;
 	}
 </style>
 <div class="animated fadeIn">
@@ -249,7 +255,7 @@
 									<hr>
 									<div class="form-group row">
 										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
-											商品关键词   </label>
+											商品关键词 </label>
 										<div class="col-md-6">
 											<input class="form-control col-6" id="name" type="text" name="name">
 											<span class="help-block offset">多个关键词，用空格隔开</span>
@@ -269,7 +275,7 @@
 									<hr>
 									<div class="form-group row">
 										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
-											虚拟销售量   </label>
+											虚拟销售量 </label>
 										<div class="col-md-6">
 											<input class="form-control col-6" id="name" type="text" name="name">
 											<span class="help-block offset">虚拟销售量（请输入0~9999999）：虚拟销售量 + 真实销量</span>
@@ -278,7 +284,7 @@
 									<hr>
 									<div class="form-group row">
 										<label class="col-md-2 col-form-label offset-1 text-right" for="name">
-											虚拟收藏量   </label>
+											虚拟收藏量 </label>
 										<div class="col-md-6">
 											<input class="form-control col-6" id="name" type="text" name="name">
 											<span class="help-block offset">虚拟收藏量（请输入0~9999999）：虚拟收藏量 + 真实收藏量</span>
@@ -302,13 +308,125 @@
 						</div>
 					</div>
 					<div class="tab-pane fade p-0" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-						第二个面板
+						<div class="card">
+							<div class="card-header">
+								<strong>添加商品图片</strong></div>
+							<div class="card-body">
+								<form class="form-horizontal" action="" method="post">
+									<div class="form-group row">
+										<div class="col-md-4">
+											<a class="btn  btn-dark " title="添加商品图片" role="button" href="javaScript:;" style="border-radius: 50%;height: 100px; width: 100px;"><i
+												 style="font-size: 80px; " class="fa fa-plus fa-lg pt-3"></i></a>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer ">
+								<div class="offset-3">
+									<a class="btn  btn-primary" role="button" href="wutong/w-goods-manage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="tab-pane fade p-0" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-						第三个面板
+						<div class="card">
+							<div class="card-header">
+								<strong>商品模型</strong></div>
+							<div class="card-body">
+								<form class="form-horizontal">
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											供应商 </label>
+										<div class="col-md-9 row">
+											<a class="btn  btn-outline-primary border-0 col-1" data-toggle="ajaxLoad" data-target="#ui-view" role="button"
+											 href="javaScript:;"><i class="fa fa-plus"> 新增</i></a>
+											<select class="form-control  col-4 " id="select3" name="select3">
+												<option value="0">选择商品模型</option>
+												<option value="1">服装</option>
+												<option value="2">手机</option>
+												<option value="3">零食</option>
+												<option value="4">书籍</option>
+												<option value="5">电脑</option>
+												<option value="6">户外</option>
+												<option value="7">鞋子</option>
+												<option value="9">艺术</option>
+											</select>
+											<a class="btn  btn-outline-primary  col-1 border-0" data-toggle="ajaxLoad" data-target="#ui-view" role="button"
+											 href="javaScript:;"><i class="fa fa-pencil-square-o"> 编辑</i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="card-body">
+										<table class="table table-responsive-sm table-bordered text-center">
+											<thead>
+												<tr>
+													<th>购买价</th>
+													<th>成本价</th>
+													<th>佣金</th>
+													<th>库存</th>
+													<th>SKU</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer ">
+								<div class="offset-3">
+									<a class="btn  btn-primary" role="button" href="wutong/w-goods-manage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="tab-pane fade p-0" id="last" role="tabpanel" aria-labelledby="last-tab">
-						第四个面板
+						<div class="card">
+							<div class="card-header">
+								<strong>积分折扣</strong></div>
+							<div class="card-body">
+								<form class="form-horizontal" action="" method="post">
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											价格阶梯 </label>
+										<div class="col-md-4 row">
+											<span class="col-4 help-inline offset-1">单次购买个数达到 </span>
+											<input class="form-control form-control-sm col-3" id="name" type="text" name="name">
+											<span class="col-1 help-inline ">价格 </span>
+											<input class="form-control form-control-sm col-3" id="name" type="text" name="name">
+											<span class="help-block offset-1 text-danger">价格阶梯最大金额不能大于商品原价！</span>
+										</div>
+										
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											赠送积分 </label>
+										<div class="col-md-4">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block offset-1 ">订单完成后赠送积分！</span>
+										</div>
+										
+									</div>
+									<hr>
+									<div class="form-group row">
+										<label class="col-md-2 col-form-label offset-1 text-right" for="name"><i class="text-danger " style="font: bold 14px/20px tahoma, verdana;">*</i>
+											兑换积分 </label>
+										<div class="col-md-4">
+											<input class="form-control col-6" id="name" type="text" name="name">
+											<span class="help-block  col"> 不得高于商品最低价格与兑换比的积，如果设置0，则不支持积分抵扣 ！</span>
+										</div>
+										
+									</div>
+								</form>
+							</div>
+							<div class="card-footer ">
+								<div class="offset-3">
+									<a class="btn  btn-primary" role="button" href="wutong/w-goods-manage.html" data-toggle="ajaxLoad" data-target="#ui-view">确认提交</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

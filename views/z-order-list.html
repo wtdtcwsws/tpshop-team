@@ -1,0 +1,166 @@
+<script src="js/zhang.js" type="text/javascript" charset="utf-8"></script>
+
+<div>
+	<div class="container" style="position: absolute;height: 42px;background-color: #FFFFFF;">
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;border-bottom: 1px solid #E6E6E6;">商品订单<small class="text-muted"
+			 style="margin-left: 10px;">商城实物商品交易订单查询及管理</small></h5>
+	</div>
+	<div class="container" style="background-color: #FFFFFF;position: absolute;margin-top: 42px;width: 100%;">
+		<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;height: 105px;">
+			<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+				<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+				<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+			</div>
+			<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+				<li style="font-size: 12px;margin-bottom: 4px;">查看操作可以查看订单详情, 包括支付费用, 商品详情等</li>
+				<li style="font-size: 12px;margin-bottom: 4px;">未支付的订单可以取消</li>
+				<li style="font-size: 12px;margin-bottom: 4px;">用户收货后, 如果没有点击"确认收货",系统自动根据设置的时间自动收货</li>
+			</ul>
+		</div>
+		<div style="margin-bottom: 5px;">
+			<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;display: inline-block;">订单列表
+				<small class="text-muted">(共0条记录)</small>
+			</h5>
+			<a href="" style="color: #999999;">
+				<div style="margin-left: 20px;display: inline-block;padding: 3px 0;">
+					<i class="fa fa-refresh"></i>
+				</div>
+			</a>
+		</div>
+		<div>
+			<div style="display: inline-block;height: 30px;">
+				<div class="input-group mb-3" style="margin: 0;">
+					<input type="date" class="form-control" id="date-input" name="date-input" style="width: 120px;height: 25px;font-size: 10px;">
+				</div>
+			</div>
+			<div style="display: inline-block;height: 30px;">
+				<div class="input-group mb-3" style="margin: 0;">
+					<input type="date" class="form-control" id="date-input" name="date-input" aria-describedby="basic-addon2" style="font-size: 10px;width: 140px;height: 25px;">
+				</div>
+			</div>
+			<select>
+				<option class="active">支付状态</option>
+				<option>未支付</option>
+				<option>已支付</option>
+				<option>已退款</option>
+				<option>拒绝付款</option>
+			</select>
+			<select style="width: 120px;">
+				<option class="active">支付方式</option>
+				<option>银联在线支付</option>
+				<option>PC端财付通</option>
+				<option>支付宝支付</option>
+				<option>微信支付</option>
+				<option>微信小程序支付</option>
+				<option>到货付款</option>
+				<option>余额支付</option>
+				<option>其他方式</option>
+				<option>积分兑换</option>
+			</select>
+			<select>
+				<option class="active">发货状态</option>
+				<option>未发货</option>
+				<option>已发货</option>
+				<option>部分发货</option>
+			</select>
+			<select>
+				<option class="active">订单状态</option>
+				<option>待确定</option>
+				<option>已确定</option>
+				<option>已收货</option>
+				<option>已取消</option>
+				<option>已完成</option>
+				<option>已作废</option>
+			</select>
+			<select>
+				<option class="active">发货人</option>
+				<option>订单编号</option>
+			</select>
+			<div style="display: inline-block;height: 30px;">
+				<div class="input-group mb-3" style="margin: 0;">
+					<input type="text" class="form-control" aria-describedby="basic-addon2" style="width: 120px;height: 25px;"
+					 placeholder="搜索相关数据...">
+					<div class="input-group-append" style="display: inline-block;">
+						<span class="input-group-text" id="basic-addon2" style="width: 50px;height: 25px;">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">搜索</font>
+							</font>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div style="margin-top: 10px;">
+				<table class="table table-responsive-sm table-sm" style="margin: 0;background-color: #F5F5F5;">
+					<thead>
+						<tr>
+							<th style="text-align: center;width: 40px;">
+								<i class="fa fa-star-o"></i>
+							</th>
+							<th style="text-align: center;width: 94px;">
+								订单编号
+							</th>
+							<th style="text-align: center;width: 134px;">
+								收货人
+							</th>
+							<th style="text-align: center;width: 163px;">
+								总金额
+							</th>
+							<th style="text-align: center;width: 79px;">
+								应付金额
+							</th>
+							<th style="text-align: center;width: 79px;">
+								订单状态
+							</th>
+							<th style="text-align: center;width: 79px;">
+								支付状态
+							</th>
+							<th style="text-align: center;width: 79px;">
+								收货状态
+							</th>
+							<th style="text-align: center;width: 79px;">
+								支付方式
+							</th>
+							<th style="text-align: center;width: 79px;">
+								配送方式
+							</th>
+							<th style="text-align: center;width: 79px;">
+								下单时间
+							</th>
+							<th style="text-align: center;width: 79px;">
+								开票
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div style="border-bottom: 1px solid #DDDDDD;">
+				<div style="display: inline-block;padding: 5px 0 5px 5px;">
+					<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+						<div style="width: 85px;">
+							<button class="btn btn-outline-primary" style="width: 80px;height: 26px;padding: 1px 0 0 0;">
+								<span style="font-size: 12px;display: block; " >
+									<i class="fa fa-plus"></i> 导出数据
+								</span>
+							</button>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div>
+				<div>
+					<table class="table table-responsive-sm table-sm" style="margin: 0;height: 300px;">
+						<tbody>
+							<tr>
+								<td class="text-center">没有符合条件的记录</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>

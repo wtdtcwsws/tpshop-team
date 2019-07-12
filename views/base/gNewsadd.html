@@ -1,0 +1,92 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+
+	.head~div {
+		margin: 25px 0px;
+	}
+	.clear:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+</style>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gNews.html" data-toggle="ajaxLoad"
+				 data-target="#ui-view"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>新闻管理 - 新增新闻 </h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站系统新闻索引与管理</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+	<div>
+		<label>标题</label><input type="text" />
+	</div>
+	<hr />
+
+	<div>
+		<label>所属分类</label>
+		<select name="">
+			<option value="">选择分类</option>
+			<option value="">选择分类</option>
+			<option value="">选择分类</option>
+		</select>
+		<br />
+		<span>当选择发布"商城公告"时，还需要设置下面的"出现位置"项</span>
+	</div>
+	<hr />
+
+	<div>
+		<label>SEO关键字</label><input type="text" /><br />
+		<span>用于SEO搜索引擎好友</span>
+	</div>
+	<hr />
+	<div>
+		<label>链接</label><input type="text" /><br />
+		<span>当填写"链接"后点击文章标题将直接跳转至链接地址，不显示文章内容。链接格式请以http://开头</span>
+	</div>
+	<hr />
+	
+	<div>
+		<label>发布时间</label><input id="date" type="text" /><br />
+	</div>
+	<hr />
+
+	<div>
+		<div class="col-1"style="float: left;">
+			<label>显示</label>
+		</div>
+		<div class="col-3"style="float: left;">
+		<input style="margin-left: 20px;"type="radio" name="OF" id="1" value="" /><label for="1">是</label>
+		<input style="margin-left: 20px;" type="radio" name="OF" id="2" value="" /><label for="2">否</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<hr />
+
+	<div>
+		<label>网页描述</label>
+		<textarea rows="2" cols="50">
+		</textarea>
+	</div>
+	<hr />
+
+	<div>
+		<label>文章内容</label>
+		<div>
+			<textarea rows="25" cols="100">
+
+		</textarea>
+		</div>
+	</div>
+</div>

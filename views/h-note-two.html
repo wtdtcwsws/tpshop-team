@@ -1,0 +1,108 @@
+<style>
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	.container-fluid>.content{
+		padding: 30px;
+		width: 100%;
+		background-color: white;
+		padding-top: 30px;
+	}
+		i{
+		font-size: 12px;
+		color: #007EE5;
+		font-style: normal;
+	}
+	td{
+		width: 100px;
+		position: relative;
+	}
+</style>
+<div class="animated fadeIn">
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div>
+				<span class="shop-set-1" style="font-size: 30px;">
+					<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-note.html" style="display: inline-block;"><i class="icon-action-undo icons font-2xl d-block mt-4"></i></a>
+					短信配置模板-编辑模板
+				</span>
+				<span class="shop-set-2" style="font-size: 20px;" >
+					网站系统短信配置模板管理	  
+				</span>
+			</div>
+		</div>
+		<div class="content">
+			<table class="table table-hover">
+				<tr>
+					<td class="text-right">
+						<span style="color: red;">*</span>
+						<span>短信签名</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" name="webID" />
+							<i>必须与短信平台短信签名一致</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+						<span style="color: red;">*</span>
+						<span>短信模板ID</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" name="webName" />
+							<i>必须与短信平台短信模板ID一致</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>发送场景</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>使用场景</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>短信内容</span>
+					</td>
+					<td>
+							<textarea class="form-control"rows="9"></textarea>
+							<i>为防止误操作, 该内容不可编辑, 大于后台配置短信模板时, 模板内容必须与该内容一致, 否则无法发送短信</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td>
+						<button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 200px;">确认提交</button>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+	
+<div>

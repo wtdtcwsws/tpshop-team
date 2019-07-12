@@ -1,0 +1,162 @@
+<style>
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	.container-fluid>.content{
+		padding: 30px;
+		width: 100%;
+		background-color: white;
+		padding-top: 30px;
+	}
+		i{
+		font-size: 12px;
+		color: #007EE5;
+		font-style: normal;
+	}
+	td{
+		width: 100px;
+		position: relative;
+	}
+</style>
+<div class="animated fadeIn">
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div>
+				<span class="shop-set-1" style="font-size: 30px;">
+					<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-manage.html" style="display: inline-block;"><i class="icon-action-undo icons font-2xl d-block mt-4"></i></a>
+					物流管理-添加物流
+				</span>
+				<span class="shop-set-2" style="font-size: 20px;" >
+					网站系统物流索引和管理	  
+				</span>
+			</div>
+		</div>
+		<div class="content">
+			<table class="table table-hover">
+				<tr>
+					<td class="text-right">
+						<span style="color: red;">*</span>
+						<span>物流公司名字</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>物流公司名字</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+						<span style="color: red;">*</span>
+						<span>快递公司编码</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>物流公司编码由拼音组成,不得含有英文以外的字符。</i>
+							<a class="col-4" href="https://blog.csdn.net/wyp584168/article/details/79196562">
+								<i class="fa fa-ambulance" style="font-size: 22px;"></i>
+								<input type="button" value="快递鸟官方查询地址" />
+							</a>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>简短描述</span>
+					</td>
+					<td>
+							<textarea class="form-control"rows="5"></textarea>
+							<i>简短描述</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>模板宽度</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>运单宽度，单位为毫米(mm)</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>模板高度</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>运单高度，单位为毫米(mm)</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>偏移量X</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>运单模板左偏移量，单位为毫米(mm)</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>偏移量Y</span>
+					</td>
+					<td>
+							<input class="form-control" type="text" />
+							<i>运单模板上偏移量，单位为毫米(mm)</i>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td class="text-right">
+							<span style="color: red;">*</span>
+							<span>选择打印项</span>
+					</td>
+					<td>
+						<select>
+							<option>添加标签</option>
+						</select>
+						<button>删除标签</button>
+					</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td>
+						<button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 200px;">确认提交</button>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+	
+<div>

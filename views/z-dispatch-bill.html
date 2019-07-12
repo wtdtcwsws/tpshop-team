@@ -1,0 +1,546 @@
+<script src="js/zhang.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="display: inline-block;">
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;width: 530px;display: inline-block;">发货单列表<small class="text-muted"
+			 style="margin-left: 10px;">已发货订单列表</small>
+		</h5>
+	</div>
+	<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;height: 85px;">
+		<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+			<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+			<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+		</div>
+		<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">点击查看操作将显示订单（包括订单物品）的详细信息</li>
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">已发货订单列表</li>
+		</ul>
+	</div>
+	<div class="row" style="padding-bottom: 8px;">
+		<div class="col-4" style="margin-top: 10px;display: inline-block;">
+			<h5 style="font-size: 16px;display: inline-block;margin: 0 10px 0 0;bottom: 0;">发货单列表
+				<small class="text-muted" style="margin-left: 5px;">(共18条记录) </small>
+			</h5>
+			<a href="" style="color: #999999;">
+				<div style="display: inline-block;padding: 3px 0;">
+					<i class="fa fa-refresh"></i>
+				</div>
+			</a>
+		</div>
+		<div class="col-2"></div>
+		<div class="col-6" style="margin-top: 10px;display: inline-block;height: 30px;">
+			<div class="input-group mb-3" style="margin: 0;">
+				<input style="width: 60;height: 25px;margin-right: 5px;" placeholder="收货人" />
+				<input style="width: 60;height: 25px;margin-right: 5px;" placeholder="订单编号" />
+				<select style="margin-right: 5px;">
+					<option class="active" value ="">待发货</option>
+					<option value ="">已发货</option>
+					<option value ="">部分发货</option>
+				</select>
+				<button type="button" style="width: 56px;height: 25px;">搜索</button>
+			</div>
+		</div>
+	</div>
+	<div style="overflow-x: auto;">
+		<!-- ************************************** -->
+		<div style="width: 100%;">
+
+			<table class="table table-responsive-sm table-sm" style="margin: 0;background-color: #F5F5F5;width: 1000px;">
+				<thead>
+					<tr>
+						<th style="text-align: center;width: width: 27px;">
+							<i class="fa fa-star-o"></i>
+						</th>
+						<th style="text-align: center;width: 160px;">
+							订单编号
+						</th>
+						<th style="text-align: center;width: 125px;">
+							下单时间
+						</th>
+						<th style="text-align: center;width: 60px;">
+							收货人
+						</th>
+						<th style="text-align: center;width: 97px;">
+							联系电话
+						</th>
+						<th style="text-align: center;width: 80px;">
+							所选物流
+						</th>
+						<th style="text-align: center;width: 80px;">
+							物流费用
+						</th>
+						<th style="text-align: center;width: 125px;">
+							支付时间
+						</th>
+						<th style="text-align: center;width: 80px;">
+							订单总价
+						</th>
+						<th style="text-align: center;width: 160px;">
+							操作
+						</th>
+					</tr>
+				</thead>
+			</table>
+			
+		</div>
+		<!-- ************************************** -->
+		<div style="padding: 5px 0;">
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 65px;">
+						<button class="btn btn-outline-primary" style="width: 60px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								批量删除
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 45px;">
+						<button class="btn btn-outline-primary" style="width: 40px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								显示
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 45px;">
+						<button class="btn btn-outline-primary" style="width: 40px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								隐藏
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- ************************************** -->
+		<div >
+			<table class="table table-responsive-sm table-sm" style="width: 1000px;">
+				<tbody>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 160px;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 10:17
+						</td>
+						<td style="text-align: center;width: 60px;">
+							夏夏
+						</td>
+						<td style="text-align: center;width: 97px;">
+							15274851694
+						</td>
+						<td style="padding: 0 15px;width: 80px;">
+							
+						</td>
+						<td style="text-align: center;width: 80px;">
+							0.00
+						</td>
+						<td style="text-align: center;width: 125px;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;width: 80px;">
+							100.00
+						</td>
+						<td style="text-align: center;width: 160px;">
+							<a href="javasript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-plane"></i>去发货
+							</a>
+							<a href="javasript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-print"></i>配货单</a>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+		</div>
+		<!-- ************************************** -->
+		<div class="row">
+			<div class="col-4 offset-4">
+				<ul class="pagination">
+					<li class="page-item active">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">1</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">2</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">下一个</font>
+							</font>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div>

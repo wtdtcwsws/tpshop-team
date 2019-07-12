@@ -1,0 +1,168 @@
+<style>
+	.shop-set{
+		width: 271px;
+		text-align: center;
+	}
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	nav ul li a{
+		font-size: 13px;
+		margin: 10px 2px 0 2px;
+		background-color: #ABDDE5;
+		border-radius: 0 40px 0 0;
+	}
+	.content>.row{
+		padding-left: 10px;
+		margin-top: 15px;
+	}
+	.content-1{
+		font-size: 18px;
+	}
+	.content-2{
+		font-size: 12px;
+		font-weight: 400;
+		color: #818182;
+	}
+	
+</style>
+<div class="animated fadeIn">
+	<div class="container-fluid">
+		<!-- 选项卡标签 -->
+		<nav>
+			<ul class="nav nav-tabs">
+				
+				<div class="shop-set">
+					<span class="shop-set-1" >
+						短信配置模板
+					</span>
+					<span class="shop-set-2" >
+						短信平台短信配置模板	  
+					</span>
+				</div>
+				
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#tab-1">短信模板</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#tab-2">发送日志</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="tab-content">
+			<!-- 短信模板-短信模板 -->
+			<div id="tab-1" class="tab-pane active">
+				<!-- 提示弹框按钮 -->
+				<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top: 20px;">
+					<strong style="font-size: 20px;">操作提示</strong> 
+					<table class="table">
+						<ul>
+							<li>短信配置模板, 由平台设置管理。</li>
+							<li>添加/编辑模板时注意"短信签名"、"短信内容"的填写。</li>
+						</ul>
+					</table>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<!-- 网页中部 -->
+				<div class="row">
+					<div class="col-2">
+						<span class="content-1">模板列表</span>
+						<span class="content-2">（共1条记录）</span>
+					</div>
+					<div class="col-1" style="position: relative;top: -15px;">
+						<a href="#" title="刷新数据">
+							<i class="fa fa-refresh fa-lg mt-4 "></i>
+						</a>
+					</div>
+				</div>
+				<!-- 网页主体表格 -->
+				<table class="table table-hover text-center table-bordered">
+					<tr class="alert-secondary">
+						<th style="width: 15px;"><i class="fa fa-star-o fa-lg"></i></th>
+						<th>应用场景</th>
+						<th>短信签名</th>
+						<th>短信模板</th>
+						<th>发送短信的内容</th>
+						<th>修改时间</th>
+						<th>操作</th>
+					</tr>
+					
+					<tr>
+						<td colspan="7" class="text-left">
+							<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-note-two.html"><button class="btn btn-outline-primary" type="button"><i class="fa fa-plus fa-lg"></i> 新增模板</button></a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td><i class="fa fa-star-o fa-lg"></i></td>
+						<td>身份验证</td>
+						<td>【TPshop商城】</td>
+						<td>4489</td>
+						<td>尊敬的用户，您的验证码为${code},请勿告诉他人。</td>
+						<td>2019-07-10 12:22:30</td>
+						<td>删除和编辑</td>
+					</tr>
+					
+				</table>
+				
+			</div>
+			
+			<!-- 短信模板-发送日志 -->
+			<div id="tab-2" class="tab-pane">
+				<!-- 提示弹框按钮 -->
+				<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top: 20px;">
+					<strong style="font-size: 20px;">操作提示</strong> 
+					<table class="table">
+						<ul>
+							<li>短信发送日志历史。</li>
+						</ul>
+					</table>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<!-- 网页中部 -->
+				<div class="row">
+					<div class="col-2">
+						<span class="content-1">日志列表</span>
+						<span class="content-2">（共0条记录）</span>
+					</div>
+					<div class="col-1" style="position: relative;top: -15px;">
+						<a href="#" title="刷新数据">
+							<i class="fa fa-refresh fa-lg mt-4 "></i>
+						</a>
+					</div>
+				</div>
+				<!-- 网页主体表格 -->
+				<table class="table table-hover text-center table-bordered">
+					<thead>
+						<tr class="alert-secondary">
+							<th style="width: 15px;"><i class="fa fa-star-o fa-lg"></i></th>
+							<th>应用场景</th>
+							<th>手机号码</th>
+							<th>发送时间</th>
+							<th>发送状态</th>
+							<th>消息内容</th>
+							<th>错误信息</th>
+						</tr>
+					</thead>
+				</table>
+				
+			</div>
+		</div>
+	</div>
+	
+</div>

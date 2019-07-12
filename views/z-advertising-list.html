@@ -1,0 +1,625 @@
+<script src="js/zhang.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="display: inline-block;">
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;width: 530px;display: inline-block;">广告列表<small class="text-muted"
+			 style="margin-left: 10px;">广告索引与管理</small>
+		</h5>
+	</div>
+	<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;height: 85px;">
+		<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+			<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+			<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+		</div>
+		<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">只需要点击半透明广告图片即可更换广告</li>
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">预览广告所在页面中选择更换你的广告</li>
+		</ul>
+	</div>
+	<div class="row" style="padding-bottom: 8px;">
+		<div class="col-4" style="margin-top: 10px;display: inline-block;">
+			<h5 style="font-size: 16px;display: inline-block;margin: 0 10px 0 0;bottom: 0;">广告列表
+				<small class="text-muted" style="margin-left: 5px;">(共76条记录) </small>
+			</h5>
+			<a href="" style="color: #999999;">
+				<div style="display: inline-block;padding: 3px 0;">
+					<i class="fa fa-refresh"></i>
+				</div>
+			</a>
+		</div>
+		<div class="col-2"></div>
+		<div class="col-6" style="margin-top: 10px;display: inline-block;height: 30px;">
+			<div class="input-group mb-3" style="margin: 0;">
+				<select>
+					<option class="active" value="">==查看所有==</option>
+					<option value="">Cart页面自动增加广告位1</option>
+					<option value="">Index页面自动增加广告位2</option>
+					<option value="">Topic页面自动增加广告位4</option>
+					<option value="">Index页面自动增加广告位9</option>
+					<option value="">Index页面自动增加广告位10</option>
+					<option value="">Index页面自动增加广告位11</option>
+					<option value="">Index页面自动增加广告位21</option>
+				</select>
+				<input type="text" class="form-control" id="date" aria-describedby="basic-addon2" style="width: 80px;height: 25px;"
+				 placeholder="请输入广告名称">
+				<div class="input-group-append" style="display: inline-block;">
+					<span class="input-group-text" id="basic-addon2" style="width: 50px;height: 25px;">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">搜索</font>
+						</font>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<!-- ************************************** -->
+		<div style="width: 100%;">
+
+			<table class="table table-responsive-sm table-sm" style="margin: 0;background-color: #F5F5F5;">
+				<thead>
+					<tr>
+						<th style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</th>
+						<th style="text-align: center;width: 55px;">
+							广告id
+						</th>
+						<th style="text-align: center;width: 200px;">
+							广告位置
+						</th>
+						<th style="text-align: center;width: 130px;">
+							广告名称
+						</th>
+						<th style="text-align: center;width: 100px;">
+							广告图片
+						</th>
+						<th style="text-align: center;width: 80px;">
+							新窗口
+						</th>
+						<th style="text-align: center;width: 80px;">
+							显示
+						</th>
+						<th style="text-align: center;width: 110px;">
+							排序
+						</th>
+						<th style="text-align: center;width: 136px;">
+							操作
+						</th>
+					</tr>
+				</thead>
+			</table>
+
+		</div>
+		<!-- ************************************** -->
+		<div style="padding: 5px 0;">
+			<div style="display: inline-block;padding-left: 15px;width: 105px;border-right: 1px dotted #D7D7D7;">
+				<a href="z-add-ad1.html" style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 88px;">
+						<button class="btn btn-outline-primary" style="width: 80px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								<i class="fa fa-plus"></i> 新增广告
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 70px;">
+						<button class="btn btn-outline-primary" style="width: 60px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								<i class="fa fa-search"></i> 登录页
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 75px;">
+						<button class="btn btn-outline-primary" style="width: 65px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								<i class="fa fa-search"></i> PC首页
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 85px;">
+						<button class="btn btn-outline-primary" style="width: 75px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								<i class="fa fa-search"></i> 手机首页
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 100px;">
+						<button class="btn btn-outline-primary" style="width: 90px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								<i class="fa fa-search"></i> 手机分类页
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- ************************************** -->
+	<div>
+		<table class="table table-responsive-sm table-sm">
+			<tbody>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;width: 40px;">
+						<i class="fa fa-star-o"></i>
+					</td>
+					<td style="text-align: center;width: 55px;">
+						69
+					</td>
+					<td style="text-align: center;width: 205px;">
+						Ad页面自动增加广告位 518
+					</td>
+					<td style="text-align: center;width: 132px;">
+						自定义广告名称
+					</td>
+					<td style="text-align: center;padding-bottom: 0;width: 102px;">
+						<img src="img/logo/oulaiya.jpg" style="width: 80px; height: 30px;">
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 82px;">
+						<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 0;">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+						</label>
+					</td>
+					<td style="text-align: center;width: 113px;">
+						<input style="width:80px;" value="50" />
+					</td>
+					<td style="text-align: center;width: 140px;">
+						<a href="z-add-ad1.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad"
+						 data-target="#ui-view">
+							<i class="fa fa-pencil-square-o"></i>编辑
+						</a>
+						<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+					</td>
+				</tr>
+				
+				
+			</tbody>
+		</table>
+
+	</div>
+	<!-- ************************************** -->
+	<div class="row">
+		<div class="col-6 offset-3">
+			<ul class="pagination">
+				<li class="page-item active">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">1</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">2</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">3</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">4</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">5</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">6</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">7</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">8</font>
+						</font>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">下一个</font>
+						</font>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,67 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+	.head~div{
+		margin: 25px 0px;
+	}
+</style>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gWZfl.html" data-toggle="ajaxLoad"
+				 data-target="#ui-view"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>文章分类</h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站文章分类添加与管理</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+<form action="" method="post">
+	<div>
+			<label>分类名称</label><input type="text" />
+		</div>
+		<hr />
+	
+		<div>
+			<label>上级分类</label>
+			<select name="">
+				<option value="">顶级分类</option>
+				<option value="">选择分类</option>
+				<option value="">选择分类</option>
+			</select>
+			<br />
+			<span>如果选择上级分类，那么新增的分类则为被选择上级分类的子分类</span>
+		</div>
+		<hr />
+	
+		<div>
+			<label>排序</label><input type="text" /><br />
+		</div>
+		<hr />
+		<div>
+			<label>搜索关键字</label><input type="text" /><br />
+		</div>
+		<hr />
+	
+		<div>
+			<label>搜索描述</label><input type="text" /><br />
+		</div>
+		<hr />
+	
+		<div>
+			<label>导航显示</label>
+				<input type="radio" name="OF" id="1" value="" /><label for="1">是GEDIAO</label>
+				<input type="radio" name="OF" id="2" value="" /><label for="2">否GEMAO</label>
+		</div>
+		<hr />
+	<input style="margin:20px 0px 20px 200px" type="submit" value="确认提交" class="btn btn-primary" />
+</form>
+	</div>
+

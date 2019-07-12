@@ -1,0 +1,81 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+
+	.head~div {
+		margin: 25px 0px;
+	}
+</style>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gteamShoping.html" data-toggle="ajaxLoad"
+				 data-target="#ui-view"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>团购管理 - 编辑团购 </h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站系统抢购活动详情页</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+	<form action="" method="post">
+		<div>
+			<label><span style="color: red;">*</span>团购标题</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">请填写团购标题</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>开始时间</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">团购开始时间</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>结束时间</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">团购结束时间</div>
+		</div>
+		<hr />
+
+		<div>
+			<label><span style="color: red;">*</span>选择团购商品</label><input type="text" />
+			<div style="padding-left: 150px;margin-top: 5px;">
+				<a href=""style="padding: 3px; border: 1px solid #007EE5;border-radius: 2px;text-decoration: none;"><i class="fa fa-search"></i>选择商品</a>
+			</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>团购价格</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">商品团购价格,单位：元</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>参团数量</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">此抢购活动最多允许抢购的商品数量</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>虚拟购买数量</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">虚拟已购买参团人数</div>
+		</div>
+		<hr />
+
+		<div style="position: relative;">
+			<label style="position: absolute;top: 0; ">团购介绍</label><textarea rows="5" cols="50" class="offset-1" placeholder="请输入活动介绍"></textarea>
+			<div style="font-size: 10px;" class="offset-1">团购描述介绍</div>
+		</div>
+		<hr />
+
+		<div>
+			<label>站内信通知</label>
+			<input type="radio" name="OF" id="1" value="" /><label for="1">是</label>
+			<input type="radio" name="OF" id="2" value="" /><label for="2">否</label>
+		</div>
+		<hr />
+		<input style="margin:20px 0px 20px 200px" type="submit" value="确认提交" class="btn btn-primary" />
+	</form>
+</div>

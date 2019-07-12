@@ -1,0 +1,89 @@
+<style type="text/css">
+	strong{
+		color: red;
+	}
+</style>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="width: 100%;display: inline-block;border-bottom: 1px solid #E6E6E6;">
+		<!-- <a class="back" href="javascript:history.back();" title="返回列表">
+			<i class="fa fa-arrow-left back-i"></i>
+		</a> -->
+		<a class="btn  btn-primary " style="margin-bottom: 3px ;border-radius:50%;" role="button" href="z-brand-list.html"
+		 data-toggle="ajaxLoad" data-target="#ui-view">
+			<i class="fa fa-arrow-left"></i>
+		</a>
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 5px;width: 530px;display: inline-block;">品牌详情<small
+			 class="text-muted" style="margin-left: 10px;">品牌添加与管理</small>
+		</h5>
+	</div>
+	<form action="" method="">
+		<div class="form-group row" style="padding: 13px 0;margin: 0;">
+			<label class="col-2 col-form-label text-right"><span style="color: red;">*</span> 品牌名称</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="名称">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;">品牌网址</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 所属分类</label>
+			<div style="padding: 5px 0;">
+				<select>
+					<option class="active">请选择分类</option>
+					<option>服饰</option>
+					<option>家居</option>
+					<option>手机</option>
+					<option>电脑</option>
+					<option>电器</option>
+					<option>食品</option>
+					<option>鞋类</option>
+					<option>艺术</option>
+				</select>
+				<select>
+					<option class="active">请选择商品分类</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 分类展示图片</label>
+			<div style="padding: 5px 0;">
+				<div class="input-file-show">
+					<span class="show">
+						<a id="img_a" target="_blank" class="nyroModal" rel="gal" href="">
+							<i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src=>',this,{tips: [1, '#fff']});"
+							 onmouseout="layer.closeAll();"></i>
+						</a>
+					</span>
+					<span class="type-file-box">
+						<input type="text" id="image" name="image" value="" class="type-file-text">
+						<input type="button" name="button" id="button1" value="选择上传..." class="type-file-button">
+					</span>
+				</div>
+				<p style="margin: 0;">请上传图片格式文件</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 排序</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="排序">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 品牌描述</label>
+			<div style="padding: 5px 0;">
+				<textarea rows="2" cols="43" ></textarea>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<div class="col-2"></div>
+			<input class="btn btn-primary" type="submit" id="" value="确认提交" />
+		</div>
+	</form>
+</div>
+<!-- <input class="btn btn-primary" type="submit" id="" value="确认提交" /> -->
+<script src="js/z.js"></script>

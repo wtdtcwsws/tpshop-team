@@ -41,13 +41,13 @@
     </script>
 	</head>
 	<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-		<header class="app-header navbar">
+		<header class="app-header navbar bg-dark">
 			<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a class="navbar-brand" href="#">
-				<img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
-				<img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
+				<img class="navbar-brand-full" src="img/brand/logo.png" width="140" height="28" alt="CoreUI Logo">
+				<img class="navbar-brand-minimized" src="" width="30" height="30" alt="CoreUI Logo">
 			</a>
 			<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
 				<span class="navbar-toggler-icon"></span>
@@ -149,48 +149,49 @@
 						<li class="nav-title">导航</li>
 						<!-- 一级菜单 -->
 						<!-- 设置导航栏 -->
-						<li class="nav-item nav-dropdown nav-title">
+						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
 								<i class="nav-icon cui-cog "></i> 设置</a>
 							<!-- 二级菜单 -->
 							<ul class="nav-dropdown-items ">
-								<li class="nav-item nav-dropdown nav-title">
+								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
 										<i class="nav-icon cui-screen-desktop"></i>系统</a>
 									<!-- 三级菜单 -->
 									<ul class="nav-dropdown-items">
 
 										<li class="nav-item">
-											<a class="nav-link" href="base/carousel.html"><i class="nav-icon icon-puzzle"></i>商城设置
+											<a class="nav-link" href="h-shop.html"><i class="nav-icon icon-puzzle"></i>商城设置
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href="text.html"><i class="nav-icon icon-puzzle"></i>地区&配送
+											<a class="nav-link" href="h-delivery.html"><i class="nav-icon icon-puzzle"></i>地区&配送
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href="text.html"><i class="nav-icon icon-puzzle"></i>短信模板
+											<a class="nav-link" href="h-note.html"><i class="nav-icon icon-puzzle"></i>短信模板
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href="new.html"><i class="nav-icon icon-puzzle"></i>消息通知
+											<a class="nav-link" href="Lz_alerts.html"><i class="nav-icon icon-puzzle"></i>消息通知
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>友情链接
+											<a class="nav-link" href="h-friendship.html"><i class="nav-icon icon-puzzle"></i>友情链接
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>清除缓存
+											<a class="nav-link" href="h-cache.html"><i class="nav-icon icon-puzzle"></i>清除缓存
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>运费模板
+											<a class="nav-link" href="h-freight.html"><i class="nav-icon icon-puzzle"></i>运费模板
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>快递公司
+											<a class="nav-link" href="h-manage.html"><i class="nav-icon icon-puzzle"></i>快递公司
 											</a>
+										</li>
 									</ul>
 								</li>
 								<li class="nav-item nav-dropdown">
@@ -205,10 +206,11 @@
 								</li>
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i>权限</a>
+										<i class="nav-icon  icons  cui-people"></i>权限</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
 											<a class="nav-link" href="wAdminManage.html"><i class="nav-icon icon-puzzle"></i>管理员列表
+											<span class="badge badge-success">new</span>
 											</a>
 										</li>
 										<li class="nav-item ">
@@ -227,7 +229,7 @@
 								</li>
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i>数据</a>
+										<i class="nav-icon cui-layers"></i>数据</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
 											<a class="nav-link" href="wutong/w-data-backup.html"><i class="nav-icon icon-puzzle"></i>数据备份
@@ -238,7 +240,7 @@
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href="wutong/w-data-demo-empty.html"><i class="nav-icon icon-puzzle"></i>数据清空
+											<a class="nav-link" href="Lz_empty.html"><i class="nav-icon icon-puzzle"></i>数据清空
 											</a>
 										</li>
 									</ul>
@@ -262,7 +264,7 @@
 									</ul>
 								</li>
 								<li class="nav-item nav-dropdown">
-									<a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon icon-puzzle"></i>导航
+									<a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon cui-location-pin"></i>导航
 									</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
@@ -276,122 +278,124 @@
 						<!-- 商场导航栏 -->
 						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
-								<i class="nav-icon icon-puzzle"></i> 商场</a>
+								<i class="nav-icon cui-basket-loaded"></i> 商场</a>
 							<ul class="nav-dropdown-items">
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i> 商品</a>
+										<i class="nav-icon cui-cart"></i> 商品</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
 											<a class="nav-link" href="wutong/w-goods-manage.html"><i class="nav-icon icon-puzzle"></i>商品列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>商品分类
+											<a class="nav-link" href="z-category.html"><i class="nav-icon icon-puzzle"></i>商品分类
+											<span class="badge badge-success">new</span>
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>库存管理
+											<a class="nav-link" href="z-stock-control.html"><i class="nav-icon icon-puzzle"></i>库存管理
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>商品模型
+											<a class="nav-link" href="z-product-model.html"><i class="nav-icon icon-puzzle"></i>商品模型
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>品牌列表
+											<a class="nav-link" href="z-brand-list.html"><i class="nav-icon icon-puzzle"></i>品牌列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>评论列表
+											<a class="nav-link" href="z-comment-list.html"><i class="nav-icon icon-puzzle"></i>评论列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>商品咨询
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li class="nav-item nav-dropdown">
-									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i> 订单</a>
-									<ul class="nav-dropdown-items">
-										<li class="nav-item ">
-											<a class="nav-link" href="views/blank.html"><i class="nav-icon icon-puzzle"></i>订单列表
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>虚拟订单
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>发货清单
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>退款单
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>退换货
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>添加订单
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>订单日志
+											<a class="nav-link" href="z-commodity-consult.html"><i class="nav-icon icon-puzzle"></i>商品咨询
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i> 广告</a>
+										<i class="nav-icon cui-note"></i> 订单</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>广告列表
+											<a class="nav-link" href="z-order-list.html"><i class="nav-icon icon-puzzle"></i>订单列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>广告位置
+											<a class="nav-link" href="z-virtual-orders.html"><i class="nav-icon icon-puzzle"></i>虚拟订单
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="z-dispatch-bill.html"><i class="nav-icon icon-puzzle"></i>发货清单
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="z-refund-order.html"><i class="nav-icon icon-puzzle"></i>退款单
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="z-changing-refunding.html"><i class="nav-icon icon-puzzle"></i>退换货
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="z-add-order.html"><i class="nav-icon icon-puzzle"></i>添加订单
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="Lz_TheOrderLog.html"><i class="nav-icon icon-puzzle"></i>订单日志
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i> 文章</a>
+										<i class="nav-icon fa fa-adn"></i> 广告</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>文章列表
+											<a class="nav-link" href="z-advertising-list.html"><i class="nav-icon icon-puzzle"></i>广告列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>文章分类
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>会员协议
-											</a>
-										</li>
-										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>专题列表
+											<a class="nav-link" href="base/gAD.html"><i class="nav-icon icon-puzzle"></i>广告位置
+											<span class="badge badge-success">new</span>
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
-										<i class="nav-icon icon-puzzle"></i> 新闻</a>
+										<i class="nav-icon fa fa-file-text-o"></i> 文章</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>新闻列表
+											<a class="nav-link" href="base/gWZ.html"><i class="nav-icon icon-puzzle"></i>文章列表
 											</a>
 										</li>
 										<li class="nav-item ">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>新闻分类
+											<a class="nav-link" href="base/gWZfl.html"><i class="nav-icon icon-puzzle"></i>文章分类
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="Lz_Vip_agreement.html"><i class="nav-icon icon-puzzle"></i>会员协议
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="base/gZTlb.html"><i class="nav-icon icon-puzzle"></i>专题列表
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item nav-dropdown">
+									<a class="nav-link nav-dropdown-toggle" href="#">
+										<i class="nav-icon fa fa-newspaper-o"></i> 新闻</a>
+									<ul class="nav-dropdown-items">
+										<li class="nav-item ">
+											<a class="nav-link" href="base/gNews.html"><i class="nav-icon icon-puzzle"></i>新闻列表
+											</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="base/gNewfl.html"><i class="nav-icon icon-puzzle"></i>新闻分类
 											</a>
 										</li>
 									</ul>
@@ -408,19 +412,19 @@
 										<i class="nav-icon icon-cursor"></i> 促销活动</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>抢购管理
+											<a class="nav-link" href="base/gShoping.html"><i class="nav-icon icon-puzzle"></i>抢购管理
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>团购管理
+											<a class="nav-link" href="base/gteamShoping.html"><i class="nav-icon icon-puzzle"></i>团购管理
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>优惠促销
+											<a class="nav-link" href="base/gSale.html"><i class="nav-icon icon-puzzle"></i>优惠促销
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>订单促销
+											<a class="nav-link" href="base/gPromotion.html"><i class="nav-icon icon-puzzle"></i>订单促销
 											</a>
 										</li>
 									</ul>
@@ -430,11 +434,11 @@
 										<i class="nav-icon icon-cursor"></i> 优惠积分</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>优惠券
+											<a class="nav-link" href="base/gCoupon.html"><i class="nav-icon icon-puzzle"></i>优惠券
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>积分兑换
+											<a class="nav-link" href="Lz_PointsFor.html"><i class="nav-icon icon-puzzle"></i>积分兑换
 											</a>
 										</li>
 									</ul>
@@ -453,7 +457,7 @@
 									</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>分销设置
+											<a class="nav-link" href="Lz_DistributionSet.html"><i class="nav-icon icon-puzzle"></i>分销设置
 											</a>
 										</li>
 									</ul>
@@ -465,23 +469,23 @@
 									</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>公众号配置
+											<a class="nav-link" href="Lz_WeixinPublicConfiguration.html"><i class="nav-icon icon-puzzle"></i>公众号配置
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>微信菜单管理
+											<a class="nav-link" href="Lz_WeiXinMenu.html"><i class="nav-icon icon-puzzle"></i>微信菜单管理
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>自动回复
+											<a class="nav-link" href="Lz_AutoReply.html"><i class="nav-icon icon-puzzle"></i>自动回复
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>模板消息
+											<a class="nav-link" href="Lz_TemplateMessage.html"><i class="nav-icon icon-puzzle"></i>模板消息
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>素材管理
+											<a class="nav-link" href="Lz_MaterialManagement.html"><i class="nav-icon icon-puzzle"></i>素材管理
 											</a>
 										</li>
 									</ul>
@@ -492,7 +496,7 @@
 						<!-- 会员导航栏 -->
 						<li class="nav-item nav-dropdown">
 							<a class="nav-link nav-dropdown-toggle" href="#">
-								<i class="nav-icon icon-star"></i> 会员</a>
+								<i class="nav-icon cui-people"></i> 会员</a>
 							<ul class="nav-dropdown-items">
 								<li class="nav-item nav-dropdown">
 									<a class="nav-link nav-dropdown-toggle" href="#">
@@ -500,11 +504,11 @@
 									</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>会员列表
+											<a class="nav-link" href="Lz_VipList.html"><i class="nav-icon icon-puzzle"></i>会员列表
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>会员等级
+											<a class="nav-link" href="Lz_VipLevel.html"><i class="nav-icon icon-puzzle"></i>会员等级
 											</a>
 										</li>
 									</ul>
@@ -515,15 +519,15 @@
 									</a>
 									<ul class="nav-dropdown-items">
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>充值记录
+											<a class="nav-link" href="Lz_Vip_top-up-record.html"><i class="nav-icon icon-puzzle"></i>充值记录
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>提现申请
+											<a class="nav-link" href="Lz_Vip_WithdrawalApplication.html"><i class="nav-icon icon-puzzle"></i>提现申请
 											</a>
 										</li>
 										<li class="nav-item nav-dropdown">
-											<a class="nav-link" href=""><i class="nav-icon icon-puzzle"></i>提现设置
+											<a class="nav-link" href="Lz_Vip_WithdrawalSetUpThe.html"><i class="nav-icon icon-puzzle"></i>提现设置
 											</a>
 										</li>
 									</ul>
@@ -532,7 +536,7 @@
 						</li>
 				</nav>
 				<!-- 导航栏结束 -->
-				
+
 				<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 			</div>
 			<main class="main bg-white">
@@ -874,7 +878,8 @@
 		<script src="vendors/pace-progress/js/pace.min.js"></script>
 		<script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
 		<script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
-		
+		<script src="js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/additional-methods.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/ajaxLoad-additional.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			$('#ui-view').ajaxLoad();

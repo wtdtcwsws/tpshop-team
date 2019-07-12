@@ -1,0 +1,102 @@
+<style type="text/css">
+	strong{
+		color: red;
+	}
+</style>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="width: 100%;display: inline-block;border-bottom: 1px solid #E6E6E6;">
+		<!-- <a class="back" href="javascript:history.back();" title="返回列表">
+			<i class="fa fa-arrow-left back-i"></i>
+		</a> -->
+		<a class="btn  btn-primary " style="margin-bottom: 3px ;border-radius:50%;" role="button" href="z-advertising-list.html"
+		 data-toggle="ajaxLoad" data-target="#ui-view">
+			<i class="fa fa-arrow-left"></i>
+		</a>
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 5px;width: 530px;display: inline-block;">广告详情<small
+			 class="text-muted" style="margin-left: 10px;">广告添加与管理</small>
+		</h5>
+	</div>
+	<form action="" method="">
+		<div class="form-group row" style="padding: 13px 0;margin: 0;">
+			<label class="col-2 col-form-label text-right"><strong>*</strong> 广告名称</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="自定义广告名称">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right">广告类型</label>
+			<div style="padding: 5px 0;">
+				<select>
+					<option class="active" value="">图片</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right"><strong>*</strong> 广告链接</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="广告链接">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right">广告位置</label>
+			<div style="padding: 5px 0;">
+				<select>
+					<option class="active" value="">Cart页面自动增加广告位1</option>
+					<option value="">Index页面自动增加广告位2</option>
+					<option value="">Topic页面自动增加广告位4</option>
+					<option value="">Index页面自动增加广告位9</option>
+					<option value="">Index页面自动增加广告位10</option>
+					<option value="">Index页面自动增加广告位11</option>
+					<option value="">Index页面自动增加广告位21</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right">开始日期</label>
+			<div style="padding: 5px 0;">
+				<input type="date" class="form-control" id="date-input" name="date-input" aria-describedby="basic-addon2" style="width: 290px;height: 25px;" >
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right">结束日期</label>
+			<div style="padding: 5px 0;">
+				<input type="date" class="form-control" id="date-input" name="date-input" aria-describedby="basic-addon2" style="width: 290px;height: 25px;" >
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 广告图片</label>
+			<div style="padding: 5px 0;">
+				<div class="input-file-show">
+					<span class="show">
+						<a id="img_a" target="_blank" class="nyroModal" rel="gal" href="">
+							<i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src=>',this,{tips: [1, '#fff']});"
+							 onmouseout="layer.closeAll();"></i>
+						</a>
+					</span>
+					<span class="type-file-box">
+						<input type="text" id="image" name="image" value="" class="type-file-text">
+						<input type="button" name="button" id="button1" value="选择上传..." class="type-file-button">
+					</span>
+				</div>
+				<p style="margin: 0;color: #AAAAAA;font-size: 8px;">请上传图片格式文件,建议图片尺寸400*168像素(宽*高, 如果不按要求上传图片将会导致前端广告显示不友好)</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right""><strong>*</strong> 背景颜色</label>
+			<div style="padding: 5px 0;">
+				<input type="color" placeholder="背景颜色：" class="input-txt" name="bgcolor" value="" >
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right""> 默认排序</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="排序">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<div class="col-2"></div>
+			<a href="#" class="btn btn-primary">确认提交</a>
+		</div>
+	</form>
+</div>

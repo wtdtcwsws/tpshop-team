@@ -1,0 +1,196 @@
+<style>
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	.container-fluid>.content{
+		padding: 10px;
+		width: 100%;
+		background-color: white;
+		padding-top: 30px;
+	}
+	.container-fluid>.row{
+		height: 50px;
+	}
+	.content>.row{
+		padding-left: 10px;
+		margin-top: 15px;
+	}
+	.content-1{
+		font-size: 18px;
+	}
+	.content-2{
+		font-size: 12px;
+		font-weight: 400;
+		color: #818182;
+	}
+</style>
+
+<div class="animated fadeIn">
+	
+<div class="container-fluid">
+	
+	<div class="row">
+		<div>
+			<span class="shop-set-1" >
+				地区设置
+			</span>
+			<span class="shop-set-2" >
+				可对系统内置的地区进行编辑	  
+			</span>
+		</div>
+	</div>
+	<div class="content">
+		
+		<!-- 提示弹框按钮 -->
+		<div class="alert alert-info alert-dismissible fade show" role="alert" >
+			<strong style="font-size: 20px;">操作提示</strong> 
+			<table>
+			<ul>
+				<li>系统平台全局设置,包括基础设置、购物、短信、邮件、水印和分销等相关模块。</li>
+			<li>该页面的所有默认图标logo在"网站根目录/public/static/images/logo"目录下, 如果需要重新设计图标可参考默认图。</li>
+			<li>鼠标移到图片，右侧会显示该图片大概所在位置。</li>
+			</ul>
+			</table>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<!-- 网页中部 -->
+		<div class="row">
+			<div class="col-2">
+				<span class="content-1">地区列表</span>
+				<span class="content-2">（共30张记录）</span>
+			</div>
+			<div class="col-1" style="position: relative;top: -15px;">
+				<a href="#" title="刷新数据">
+					<i class="fa fa-refresh fa-lg mt-4 "></i>
+				</a>
+			</div>
+		</div>
+		<!-- 网页主体表格 -->
+		<table class="table table-hover text-center table-bordered">
+			
+				<tr class="alert-secondary">
+					<td><i class="fa fa-star-o fa-lg"></i></td>
+					<th>操作</th>
+					<th>地区</th>
+					<th>所在层级</th>
+					<th>上级地区ID</th>
+					<th style="width: 600px;"></th>
+				</tr>
+			
+		
+				<tr>
+					<td colspan="6" class="text-left">
+						<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-delivery-two.html"><button class="btn btn-outline-primary" type="button"><i class="fa fa-plus fa-lg"></i> 新增数据</button></a>
+						<button class="btn btn-outline-primary" type="button"><i class="fa fa-level-up fa-lg"></i> 返回上级地区</button>
+						<button class="btn btn-outline-primary" type="button"><i class="fa fa-plus fa-lg"></i> 初始化地址json文件</button>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><i class="fa fa-star-o fa-lg"></i></td>
+					<td class="p-0">
+						<a>
+						<button class="btn btn-ghost-dark" type="button">
+							<i class="icons font-1xl cui-trash"></i>
+							删除
+						</button>
+						</a>
+						<a>
+							<div class="btn-group dropright"">
+							  <button type="button" class="btn  m btn-ghost-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+								设置
+							  </button>
+							  <div class="dropdown-menu" style="width: 4px;">
+								<button class="btn btn-dark">新增下级</button><br />
+								<button class="btn btn-dark">查看下级</button>
+							  </div>
+							</div>
+						</a>
+					</td>
+					<td>内蒙古自治区</td>
+					<td>1</td>
+					<td>0</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td><i class="fa fa-star-o fa-lg"></i></td>
+					<td class="p-0">
+						<a>
+						<button class="btn btn-ghost-dark" type="button">
+							<i class="icons font-1xl cui-trash"></i>
+							删除
+						</button>
+						</a>
+						<a>
+							<div class="btn-group dropright"">
+							  <button type="button" class="btn  m btn-ghost-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+								设置
+							  </button>
+							  <div class="dropdown-menu" style="width: 4px;">
+								<button class="btn btn-dark">新增下级</button><br />
+								<button class="btn btn-dark">查看下级</button>
+							  </div>
+							</div>
+						</a>
+					</td>
+					<td>黑龙江省</td>
+					<td>1</td>
+					<td>0</td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td><i class="fa fa-star-o fa-lg"></i></td>
+					<td class="p-0">
+						<a>
+						<button class="btn btn-ghost-dark" type="button">
+							<i class="icons font-1xl cui-trash"></i>
+							删除
+						</button>
+						</a>
+						<a>
+							<div class="btn-group dropright"">
+							  <button type="button" class="btn  m btn-ghost-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+								设置
+							  </button>
+							  <div class="dropdown-menu" style="width: 4px;">
+								<button class="btn btn-dark">新增下级</button><br />
+								<button class="btn btn-dark">查看下级</button>
+							  </div>
+							</div>
+						</a>
+					</td>
+					<td>上海市</td>
+					<td>1</td>
+					<td>0</td>
+					<td></td>
+				</tr>
+				
+				
+			
+			
+		</table>
+	</div>
+	
+	
+	
+</div>
+	
+	
+	
+	
+</div>

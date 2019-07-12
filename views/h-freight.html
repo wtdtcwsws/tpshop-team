@@ -1,0 +1,166 @@
+<style>
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	.container-fluid>.content{
+		padding: 10px;
+		width: 100%;
+		background-color: white;
+		padding-top: 30px;
+	}
+	.container-fluid>.row{
+		height: 50px;
+	}
+	.content>.row{
+		padding-left: 10px;
+		margin-top: 15px;
+	}
+	.content-1{
+		font-size: 18px;
+	}
+	.content-2{
+		font-size: 12px;
+		font-weight: 400;
+		color: #818182;
+	}
+	.peisong{
+		height: 40px;
+		margin-top: 30px;
+		
+		border-bottom: 1px solid #C0C6CC;
+	}
+	.peisong>.peisong-1{
+		display: inline-block;
+		font-size: 20px;
+	}
+	.peisong>.peisong-2{
+		margin-left: 850px;
+		display: inline-block;
+		
+	}
+	.peisong>.peisong-2>a>i{
+		margin-right: 30px;
+	}
+</style>
+<div class="animated fadeIn">
+	
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div>
+				<span class="shop-set-1" >
+					运费模板
+				</span>
+				<span class="shop-set-2" >
+					运费模板列表与管理	  
+				</span>
+			</div>
+		</div>
+		<div class="content">
+			<!-- 提示弹框按钮 -->
+			<div class="alert alert-info alert-dismissible fade show" role="alert" >
+				<strong style="font-size: 20px;">操作提示</strong> 
+				<table>
+				<ul>
+					<li>运费模板, 由平台设置管理。</li>
+				</ul>
+				</table>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			
+			<!-- 网页中部 -->
+			<div class="row">
+				<div class="col-2">
+					<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-freight-two.html"><button class="btn btn-block btn-outline-primary" type="button">新增运费模板</button></a>
+				</div>
+			</div>
+			
+			<!-- 网页最后部分 -->
+			<div >
+				<table class="table table-hover text-center table-bordered">
+					<div class="peisong">
+						<div class="peisong-1">以重量计算，全国配送</div>
+						<div class="peisong-2">
+							<a href="#" title="编辑运费模板"><i class="fa fa-pencil-square-o fa-lg"></i></a>
+							<a href="#" title="删除运费模板"><i class="fa fa-trash-o fa-lg"></i></a>
+						</div>
+					</div>
+					<tr>
+						<th>配送区域</th>
+						<th>首重量(克)</th>
+						<th>运费(元)</th>
+						<th>续重量(克)</th>
+						<th>运费(元)</th>
+					</tr>
+					
+					<tr>
+						<td>江苏</td>
+						<td>500</td>
+						<td>8.00</td>
+						<td>200</td>
+						<td>3.00</td>
+					</tr>
+					
+					<tr>
+						<td>河南</td>
+						<td>0</td>
+						<td>0.00</td>
+						<td>0</td>
+						<td>0.00</td>
+					</tr>
+					
+				</table>
+				
+				<table class="table table-hover text-center table-bordered">
+					<div class="peisong">
+						<div class="peisong-1">以体积计算，全国配送</div>
+						<div class="peisong-2">
+							<a href="#" title="编辑运费模板"><i class="fa fa-pencil-square-o fa-lg"></i></a>
+							<a href="#" title="删除运费模板"><i class="fa fa-trash-o fa-lg"></i></a>
+						</div>
+					</div>
+					<tr>
+						<th>配送区域</th>
+						<th>首体积(立方米)</th>
+						<th>运费(元)</th>
+						<th>续体积(立方米)</th>
+						<th>运费(元)</th>
+					</tr>
+					
+					<tr>
+						<td>江苏</td>
+						<td>4</td>
+						<td>3.00</td>
+						<td>8</td>
+						<td>9.00</td>
+					</tr>
+					
+					<tr>
+						<td>河南</td>
+						<td>5</td>
+						<td>11.00</td>
+						<td>10</td>
+						<td>23.00</td>
+					</tr>
+					
+				</table>
+				
+			</div>
+			
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,86 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+
+	.head~div {
+		margin: 25px 0px;
+	}
+</style>
+<script src="js/gData.js"></script>
+<script src="js/jQuery-2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gWZ.html" data-toggle="ajaxLoad" data-target="#ui-view"><i
+					 class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>文章管理 - 新增文章</h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站系统文章索引与管理</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+	<form>
+		<div>
+			<label>标题</label><input type="text" />
+		</div>
+		<hr />
+
+		<div>
+			<label>所属分类</label>
+			<select name="">
+				<option value="">选择分类</option>
+				<option value="">选择分类</option>
+				<option value="">选择分类</option>
+			</select>
+			<br />
+			<span>当选择发布"商城公告"时，还需要设置下面的"出现位置"项</span>
+		</div>
+		<hr />
+
+		<div>
+			<label>SEO关键字</label><input type="text" /><br />
+			<span>用于SEO搜索引擎好友</span>
+		</div>
+		<hr />
+
+		<div>
+			<label>发布时间</label><input id="date" type="text" /><br />
+		</div>
+		<hr />
+
+		<div>
+			<label>显示</label>
+			<label style="width: 110px;"></label>
+			<input type="radio" name="OF" id="1" value="" /><label for="1">是</label>
+			<input type="radio" name="OF" id="2" value="" /><label for="2">否</label>
+		</div>
+		<hr />
+
+		<div>
+			<label>网页描述</label>
+			<textarea rows="2" cols="50">
+		</textarea>
+		</div>
+		<hr />
+
+		<div>
+			<label>内容</label>
+			<div>
+				<textarea rows="20" cols="100">
+
+		</textarea>
+			</div>
+		</div>
+		<hr />
+		<input style="margin:20px 0px 20px 200px" type="submit" value="确认提交" class="btn btn-primary" />
+	</form>
+</div>

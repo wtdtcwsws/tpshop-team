@@ -1,0 +1,491 @@
+<script src="js/zhang.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="display: inline-block;">
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;width: 530px;display: inline-block;">评价管理<small class="text-muted"
+			 style="margin-left: 10px;">商品交易评价管理</small>
+		</h5>
+	</div>
+	<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;height: 105px;">
+		<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+			<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+			<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+		</div>
+		<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">用户对购买的商品进行评价</li>
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">"显示"栏可控制某条评论是否显示或隐藏</li>
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">评论排序：按照升序排序，数字越小，越靠前</li>
+		</ul>
+	</div>
+	<div class="row" style="padding-bottom: 8px;">
+		<div class="col-4" style="margin-top: 10px;display: inline-block;">
+			<h5 style="font-size: 16px;display: inline-block;margin: 0 10px 0 0;bottom: 0;">商品评价列表
+				<small class="text-muted" style="margin-left: 5px;">(共59条记录) </small>
+			</h5>
+			<a href="" style="color: #999999;">
+				<div style="display: inline-block;padding: 3px 0;">
+					<i class="fa fa-refresh"></i>
+				</div>
+			</a>
+		</div>
+		<div class="col-4"></div>
+		<div class="col-4" style="margin-top: 10px;display: inline-block;height: 30px;">
+			<div class="input-group mb-3" style="margin: 0;">
+				<input style="width: 60;height: 25px;margin-right: 5px;" value="评论内容..." />
+				<input type="text" class="form-control" id="date" aria-describedby="basic-addon2" style="width: 80px;height: 25px;"
+				 placeholder="搜索用户">
+				<div class="input-group-append" style="display: inline-block;">
+					<span class="input-group-text" id="basic-addon2" style="width: 50px;height: 25px;">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">搜索</font>
+						</font>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="overflow-x: auto;">
+		<!-- ************************************** -->
+		<div style="width: 100%;">
+
+			<table class="table table-responsive-sm table-sm" style="margin: 0;background-color: #F5F5F5;width: 1100px;">
+				<thead>
+					<tr>
+						<th style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</th>
+						<th style="text-align: center;width: 94px;">
+							用户
+						</th>
+						<th style="text-align: center;width: 134px;">
+							评论内容
+						</th>
+						<th style="text-align: center;width: 163px;">
+							商品
+						</th>
+						<th style="text-align: center;width: 79px;">
+							显示
+						</th>
+						<th style="text-align: center;width: 170px;">
+							评论时间
+						</th>
+						<th style="text-align: center;width: 174px;">
+							IP地址
+						</th>
+						<th style="text-align: center;width: 108px;">
+							排序
+						</th>
+						<th style="text-align: center;width: 136px;">
+							操作
+						</th>
+					</tr>
+				</thead>
+			</table>
+			
+		</div>
+		<!-- ************************************** -->
+		<div style="padding: 5px 0;">
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 65px;">
+						<button class="btn btn-outline-primary" style="width: 60px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								批量删除
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;border-right: 1px dotted #D7D7D7;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 45px;">
+						<button class="btn btn-outline-primary" style="width: 40px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								显示
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+			<div style="display: inline-block;padding-left: 5px;">
+				<a style="text-decoration:none;height: 49px;" data-toggle="ajaxLoad" data-target="#ui-view">
+					<div style="width: 45px;">
+						<button class="btn btn-outline-primary" style="width: 40px;height: 26px;padding: 1px 0 0 0;">
+							<span style="font-size: 12px;display: block; ">
+								隐藏
+							</span>
+						</button>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- ************************************** -->
+		<div>
+			<table class="table table-responsive-sm table-sm" style="width: 1100px;">
+				<tbody>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 40px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;width: 94px;">
+							15915407513
+						</td>
+						<td style="text-align: center;width: 134px;">
+							我就是看看
+						</td>
+						<td style="text-align: center;width: 163px;">
+							茵曼A字半身裙
+						</td>
+						<td style="padding: 0 15px;width: 79px;">
+							<label class="switch switch-label switch-pill switch-outline-success-alt" style="margin: 5px 0;">
+								<input class="switch-input" type="checkbox" checked="">
+								<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+							</label>
+						</td>
+						<td style="text-align: center;width: 170px;">
+							2018-04-27 17:52:30
+						</td>
+						<td style="text-align: center;width: 174px;">
+							183.11.38.21
+						</td>
+						<td style="text-align: center;width: 108px;">
+							<input style="width:80px;" value="12" />
+						</td>
+						<td style="text-align: center;width: 136px;">
+							<a href="z-examine-list.html" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					
+					
+				</tbody>
+			</table>
+			
+		</div>
+		<!-- ************************************** -->
+		<div class="row">
+			<div class="col-4 offset-4">
+				<ul class="pagination">
+					<li class="page-item active">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">1</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">2</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">3</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">4</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">下一个</font>
+							</font>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div>

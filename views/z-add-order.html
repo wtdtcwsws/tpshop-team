@@ -1,0 +1,119 @@
+<style type="text/css">
+	strong{
+		color: red;
+	}
+</style>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="width: 100%;display: inline-block;border-bottom: 1px solid #E6E6E6;">
+		<!-- <a class="back" href="javascript:history.back();" title="返回列表">
+			<i class="fa fa-arrow-left back-i"></i>
+		</a> -->
+		<a class="btn  btn-primary " style="margin-bottom: 3px ;border-radius:50%;" role="button" href="#"
+		 data-toggle="ajaxLoad" data-target="#ui-view">
+			<i class="fa fa-arrow-left"></i>
+		</a>
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 5px;width: 530px;display: inline-block;">添加订单<small
+			 class="text-muted" style="margin-left: 10px;">管理员在后台添加一个新订单</small>
+		</h5>
+	</div>
+	<form action="" method="">
+		<div class="form-group row" style="padding: 13px 0;margin: 0;">
+			<label class="col-2 col-form-label text-right"><strong>*</strong> 用户名</label>
+			<div class="col-10" style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;display: inline-block;" placeholder="用户昵称搜索">
+				<select>
+					<option value ="">选择用户</option>
+				</select>
+				<button class="btn btn-info" type="button" style="color: white;height: 25px;padding-top: 0;">
+					<i class="fa fa-search"></i>搜索
+				</button>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 收货人</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="收货人名字">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 手机</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="收货人联系电话">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 地址</label>
+			<div class="col-10" style="padding: 5px 0;">
+				<select>
+					<option class="active">选择省份</option>
+					<option>内蒙古自治区</option>
+					<option>辽宁省</option>
+					<option>吉林省</option>
+					<option>黑龙江省</option>
+					<option>上海市</option>
+					<option>江苏省</option>
+					<option>浙江省</option>
+					<option>安徽省</option>
+					<option>福建省</option>
+					<option>江西省</option>
+					<option>山东省</option>
+					<option>河南省</option>
+					<option>湖北省</option>
+					<option>湖南省</option>
+					<option>广东省</option>
+					<option>广西壮族自治区</option>
+					<option>海南省</option>
+				</select>
+				<select>
+					<option class="active">选择城市</option>
+				</select>
+				<select>
+					<option class="active">选择区域</option>
+				</select>
+				<input style="width: 290px; height: 26px;margin: 0;" placeholder="详细地址">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 邮编</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="收货地址邮编">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"> 发票抬头</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="发票抬头">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"> 纳税人编号</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" style="width: 290px; height: 26px;" placeholder="纳税人识别号">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"> 添加商品</label>
+			<div style="padding: 5px 0;">
+				<button class="btn btn-info" type="button" style="color: white;height: 25px;padding-top: 0;">
+					<i class="fa fa-search"></i>添加商品
+				</button>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 商品列表</label>
+			<div style="padding: 5px 0;">
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><strong>*</strong> 管理员备注</label>
+			<div style="padding: 5px 0;">
+				<textarea rows="2" cols="43">管理员添加订单</textarea>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<div class="col-2"></div>
+			<a href="#" class="btn btn-primary">确认提交</a>
+		</div>
+	</form>
+</div>

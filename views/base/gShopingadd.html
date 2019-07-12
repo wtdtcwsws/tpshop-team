@@ -1,0 +1,66 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+
+	.head~div {
+		margin: 25px 0px;
+	}
+</style>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gShoping.html" data-toggle="ajaxLoad"
+				 data-target="#ui-view"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>促销管理 - 编辑抢购 </h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站系统抢购活动详情页</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+	<form action="" method="post">
+		<div>
+			<label><span style="color: red;">*</span>参加抢购数量</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">此抢购活动最多允许抢购的商品数量</div>
+		</div>
+		<hr />
+
+		<div>
+			<label><span style="color: red;">*</span>限购数量</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">限时抢购每个人能购买的数量</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>开始时间</label><input type="text" />
+			<select style="position:absolute;left: 320px;height: 26px;">
+				<option value="">00:00:00</option>
+				<option value="">02:00:00</option>
+				<option value="">04:00:00</option>
+			</select>
+			<div style="font-size: 10px;padding-left: 150px;">抢购开始时间</div>
+			<div style="font-size: 10px;padding-left: 150px;color: red;">重要:抢购时间是从凌晨0:00:00秒开始, 每隔2小时一个节点, 所以活动时间必须是两小时之内才有效, (例如今天是2017年1月1日下午2点场,<br />
+那活动开始和结束时间必须是:2017-01-01 14:00:01 ~ 2017-01-01 15:59:59 时间范围内), 否则前端无法显示活动信息</div>
+		</div>
+		<hr />
+
+		<div style="position: relative;">
+			<label style="position: absolute;top: 0; ">抢购介绍</label><textarea rows="5" cols="50"class="offset-1"placeholder="请输入活动介绍"></textarea>
+			<div style="font-size: 10px;"class="offset-1">抢购描述介绍</div>
+		</div>
+		<hr />
+
+		<div>
+			<label>站内信通知</label>
+			<input type="radio" name="OF" id="1" value="" /><label for="1">是</label>
+			<input type="radio" name="OF" id="2" value="" /><label for="2">否</label>
+		</div>
+		<hr />
+		<input style="margin:20px 0px 20px 200px" type="submit" value="确认提交" class="btn btn-primary" />
+	</form>
+</div>

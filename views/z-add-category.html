@@ -1,0 +1,128 @@
+
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="width: 100%;display: inline-block;border-bottom: 1px solid #E6E6E6;">
+		<!-- <a class="back" href="javascript:history.back();" title="返回列表">
+			<i class="fa fa-arrow-left back-i"></i>
+		</a> -->
+		<a class="btn  btn-primary " style="margin-bottom: 3px ;border-radius:50%;" role="button" href="z-category.html"
+		 data-toggle="ajaxLoad" data-target="#ui-view">
+			<i class="fa fa-arrow-left"></i>
+		</a>
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 5px;width: 530px;display: inline-block;">商品分类 - 添加修改分类<small
+			 class="text-muted" style="margin-left: 10px;">添加或编辑商品分类</small>
+		</h5>
+	</div>
+	<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;height: 105px;margin-top: 5px;">
+		<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+			<li style="font-size: 12px;margin-bottom: 4px;">商品分类最多分为三级</li>
+			<li style="font-size: 12px;margin-bottom: 4px;">添加或者修改分类时, 应注意选择对应的上级</li>
+			<li style="font-size: 12px;margin-bottom: 4px;">
+				<strong style="margin-bottom: 4px;color: #000000;">
+					关于分类图标替换:
+				</strong>
+			</li>
+			<li style="font-size: 12px;margin-bottom: 4px;">1.WEB(PC)端的图标直接找到分类图替换即可,
+				图标路径:template/pc/rainbow/static/images/ico-tphsop-index.png</li>
+			<li style="font-size: 12px;margin-bottom: 4px;">2.WAP,APP端的图标在下列编辑框"分类展示图片"上传即可(特别注意:该图标有且仅是第三级分类才有效)</li>
+	</div>
+	<form autocomplete="off">
+		<div class="form-group row" style="padding: 13px 0;margin: 0;">
+			<label class="col-2 col-form-label text-right"><span style="color: red;">*</span> 分类名称</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" name="name" style="width: 290px; height: 26px;display: inline-block;" placeholder="名称">
+				<span style="color: red;"></span>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 手机分类名称</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" name="phoneName" style="width: 290px; height: 26px;display: inline-block;" placeholder="手机分类名称">
+				<span style="color: red;"></span>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"> 上级分类</label>
+			<div style="padding: 5px 0;">
+				<select>
+					<option class="active">顶级分类</option>
+					<option>&nbsp;&nbsp;服饰</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;女装</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;男装</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;内衣</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;童装</option>
+					<option>&nbsp;&nbsp;家居</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;厨具</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;家纺</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;灯具</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;家具</option>
+				</select>
+				<p style="margin: 0;font-size: 12px;">如果选择上级分类，那么新增的分类则为被选择上级分类的子分类</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 导航显示</label>
+			<div style="padding: 5px 0;">
+				<label class="switch switch-label switch-success" style="margin-bottom: 0;">
+					<input class="switch-input" type="checkbox" checked="">
+					<span class="switch-slider" data-checked="是" data-unchecked="否"></span>
+				</label>
+				<p style="margin: 0;font-size: 12px;">是否在导航栏显示</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"> 分类分组</label>
+			<div style="padding: 5px 0;">
+				<select>
+					<option class="active" value="">0</option>
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+					<option value="">5</option>
+					<option value="">6</option>
+				</select>
+				<p style="margin: 0;font-size: 12px;">有时候左侧菜单栏同一行显示多个分类, 所以给他们一个分组</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 分类展示图片</label>
+			<div style="padding: 5px 0;">
+				<div class="input-file-show">
+					<span class="show">
+						<a id="img_a" target="_blank" class="nyroModal" rel="gal" href="">
+							<i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src=>',this,{tips: [1, '#fff']});"
+							 onmouseout="layer.closeAll();"></i>
+						</a>
+					</span>
+					<span class="type-file-box">
+						<input type="text" id="image" value="" class="type-file-text">
+						<input type="button" name="button" id="button1" value="选择上传..." class="type-file-button">
+					</span>
+				</div>
+				<p style="margin: 0;"><strong style="color: orange;font-size: 12px;">此分类图片用于手机端显示, 并有且仅是第三级分类上传的图片才有效</strong></p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 排序</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" name="sort" style="width: 140px; height: 26px;display: inline-block;">
+				<span style="color: red;"></span>
+				<p style="margin: 0;font-size: 12px;">根据排序进行由小到大排列显示</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<label class="col-2 col-form-label text-right" style="font-size: 12px;"><span style="color: red;">*</span> 分佣比例</label>
+			<div style="padding: 5px 0;">
+				<input class="form-control" name="distribution" style="width: 140px; height: 26px;display: inline-block;">%
+				<span style="color: red;"></span>
+				<p style="margin: 0;font-size: 12px;">用于商城分销,微信三级分销</p>
+			</div>
+		</div>
+		<div class="form-group row" style="padding-bottom: 13px;margin: 0;">
+			<div class="col-2"></div>
+			<input class="btn btn-primary" type="submit" id="" value="确认提交" />
+		</div>
+	</form>
+</div>
+<script src="js/z.js"></script>

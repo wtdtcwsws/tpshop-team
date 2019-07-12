@@ -1,0 +1,1438 @@
+<script src="js/zhang.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="display: inline-block;">
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;width: 530px;display: inline-block;">商品管理-库存日志<small
+			 class="text-muted" style="margin-left: 10px;">网站系统库存日志</small>
+		</h5>
+		<ul class="nav nav-tabs list-inline" style="display: inline-block;">
+			<li class="nav-item list-inline-item">
+				<a class="nav-link active" data-toggle="tab" href="#tab-1">入库日志</a>
+			</li>
+			<li class="nav-item list-inline-item">
+				<a class="nav-link" data-toggle="tab" href="#tab-2">出库日志</a>
+			</li>
+			<li class="nav-item list-inline-item">
+				<a class="nav-link" data-toggle="tab" href="#tab-3">库存预警</a>
+			</li>
+			<li class="nav-item list-inline-item">
+				<a class="nav-link" data-toggle="tab" href="#tab-4">库存盘点</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="tab-content" style="border: 0;">
+		<div id="tab-1" class="tab-pane active" style="padding: 0;">
+			<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;margin-top: 5px;">
+				<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+					<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+					<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+				</div>
+			</div>
+
+			<div style="margin-bottom: 5px;">
+				<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;display: inline-block;">入库日志
+					<small class="text-muted">(共1031条记录)</small>
+				</h5>
+				<a href="" style="color: #999999;">
+					<div style="margin-left: 20px;display: inline-block;padding: 3px 0;">
+						<i class="fa fa-refresh"></i>
+					</div>
+				</a>
+				<!-- **************************************** -->
+				<div style="display: inline-block;margin-left: 80px;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<input type="date" class="form-control" id="date-input" name="date-input" aria-describedby="basic-addon2" style="width: 140px;height: 25px;">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 75px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">起始时间</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div style="display: inline-block;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<input type="date" class="form-control" id="date-input" name="date-input" aria-describedby="basic-addon2" style="width: 140px;height: 25px;">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 75px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">截止时间</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+				<select>
+					<option class="active">入库</option>
+					<option>出库</option>
+				</select>
+				<div style="display: inline-block;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<input type="text" class="form-control" aria-describedby="basic-addon2" style="width: 120px;height: 25px;"
+						 placeholder="商品名称">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 50px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">搜索</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-body" style="padding: 0 0 5px;">
+				<table class="table table-responsive-sm">
+					<thead style="background: #F5F5F5;">
+						<tr>
+							<th style="width: 20px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">
+										<i class="fa fa-star-o"></i>
+									</font>
+								</font>
+							</th>
+							<th class="text-center" style="width: 100px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">编号</font>
+								</font>
+							</th>
+							<th class="text-center" style="width: 150px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">商品名称</font>
+								</font>
+							</th>
+							<th class="text-center" style="width: 350px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">商品规格</font>
+								</font>
+							</th>
+							<th class="text-center" style="width: 170px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">订单号</font>
+								</font>
+							</th>
+							<th class="text-center">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">库存</font>
+								</font>
+							</th>
+						</tr>
+					</thead>
+					<tbody id="stock-control-1">
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">
+								<i class="fa fa-star-o"></i>
+							</td>
+							<td class="text-center">
+								1066
+							</td>
+							<td class="text-center">
+								iphoneXS
+							</td>
+							<td class="text-center">
+								选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+							</td>
+							<td class="text-center">
+								201907090949504126
+							</td>
+							<td class="text-center">
+								56
+							</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<div class="col-4 offset-4">
+					<ul class="pagination">
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">上一页</font>
+								</font>
+							</a>
+						</li>
+						<li class="page-item active">
+							<a class="page-link" href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">1</font>
+								</font>
+							</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">2</font>
+								</font>
+							</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">3</font>
+								</font>
+							</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">4</font>
+								</font>
+							</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">下一个</font>
+								</font>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="tab-2" class="tab-pane" style="padding: 0;">
+			<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;margin-top: 5px;">
+				<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+					<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+					<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+				</div>
+			</div>
+
+			<div style="margin-bottom: 5px;">
+				<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;display: inline-block;">库存日志
+					<small class="text-muted">(共5条记录)</small>
+				</h5>
+				<a href="" style="color: #999999;">
+					<div style="margin-left: 20px;display: inline-block;padding: 3px 0;">
+						<i class="fa fa-refresh"></i>
+					</div>
+				</a>
+				<!-- **************************************** -->
+				<div style="display: inline-block;margin-left: 142px;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<input type="text" class="form-control" id="date" aria-describedby="basic-addon2" style="width: 120px;height: 25px;">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 75px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">起始时间</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div style="display: inline-block;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<input type="text" class="form-control" id="date" aria-describedby="basic-addon2" style="width: 120px;height: 25px;">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 75px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">截止时间</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+				<select>
+					<option>入库</option>
+					<option class="active">出库</option>
+				</select>
+				<div style="display: inline-block;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<input type="text" class="form-control" aria-describedby="basic-addon2" style="width: 120px;height: 25px;"
+						 placeholder="商品名称">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 50px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">搜索</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="overflow-x:auto;">
+				<div class="card-body" style="padding: 0 0 5px;width: 1400px;">
+					<table class="table table-responsive-sm">
+						<thead style="background: #F5F5F5;">
+							<tr>
+								<th style="width: 20px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">
+											<i class="fa fa-star-o"></i>
+										</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">编号</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 150px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品名称</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 350px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品规格</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 170px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">订单号</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">库存</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">库存类型</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">操作人</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">操作类型</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 150px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">日志时间</font>
+									</font>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									201907090949504126
+								</td>
+								<td class="text-center">
+									56
+								</td>
+								<td class="text-center">
+									货品库存
+								</td>
+								<td class="text-center">
+									小黑
+								</td>
+								<td class="text-center">
+									订单出库
+								</td>
+								<td class="text-center">
+									2019-07-09 16:19:32
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="tab-3" class="tab-pane" style="padding: 0;">
+			<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;margin-top: 5px;height: 110px;">
+				<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+					<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+					<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+				</div>
+				<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+					<li style="font-size: 12px;margin-bottom: 4px;">库存预警数需在系统->商城设置->基本设置中进行设置</li>
+					<li style="font-size: 12px;margin-bottom: 4px;">未设置库存预警数值时，默认为10</li>
+					<li style="font-size: 12px;margin-bottom: 4px;">库存输入框可快速修改库存</li>
+				</ul>
+			</div>
+
+			<div style="margin-bottom: 5px;">
+				<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;display: inline-block;">库存预警
+					<small class="text-muted">(共5条记录)</small>
+				</h5>
+				<a href="" style="color: #999999;">
+					<div style="margin-left: 20px;display: inline-block;padding: 3px 0;">
+						<i class="fa fa-refresh"></i>
+					</div>
+				</a>
+				<!-- **************************************** -->
+				<div style="display: inline-block;margin-left: 325px;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">所有类型</option>
+								<option>B 保温杯</option>
+								<option>B 煲</option>
+								<option>C 床单</option>
+								<option>C 床罩</option>
+								<option>D 电视机</option>
+								<option>D 电脑</option>
+								<option>D 电冰箱</option>
+								<option>D 电风扇</option>
+								<option>S 手机</option>
+								<option>S 摄像头</option>
+							</select>
+						</div>
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">所有品牌</option>
+								<option>A 安踏</option>
+								<option>A Apple</option>
+								<option>B 保时捷</option>
+								<option>B 包贝尔</option>
+								<option>H 海尔</option>
+								<option>H 华为</option>
+							</select>
+						</div>
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">全部</option>
+								<option>上架</option>
+								<option>下架</option>
+							</select>
+						</div>
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">全部</option>
+								<option>新品</option>
+								<option>推荐</option>
+							</select>
+						</div>
+						<input type="text" class="form-control" aria-describedby="basic-addon2" style="width: 100px;height: 25px;" placeholder="搜索词...">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 75px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">搜索</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div style="overflow-x:auto;">
+				<div class="card-body" style="padding: 0 0 5px;width: 1000px;">
+					<table class="table table-responsive-sm">
+						<thead style="background: #F5F5F5;">
+							<tr>
+								<th style="width: 20px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">
+											<i class="fa fa-star-o"></i>
+										</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品编号</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 150px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品名称</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 350px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品规格</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 170px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品分类</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品品牌</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">库存</font>
+									</font>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center">
+									1066
+								</td>
+								<td class="text-center">
+									iphoneXS
+								</td>
+								<td class="text-center">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center">
+									手机通讯
+								</td>
+								<td class="text-center">
+									榴莲
+								</td>
+								<td class="text-center">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="tab-4" class="tab-pane" style="padding: 0;">
+			<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;margin-top: 5px;height: 85px;">
+				<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+					<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+					<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+				</div>
+				<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+					<li style="font-size: 12px;margin-bottom: 4px;">库存输入框可快速修改库存量</li>
+					<li style="font-size: 12px;margin-bottom: 4px;">批量修改输入框内可对选中的商品进行批量修改</li>
+				</ul>
+			</div>
+			
+			<div style="margin-bottom: 5px;">
+				<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;display: inline-block;">库存盘点
+					<small class="text-muted">(共5条记录)</small>
+				</h5>
+				<a href="" style="color: #999999;">
+					<div style="margin-left: 20px;display: inline-block;padding: 3px 0;">
+						<i class="fa fa-refresh"></i>
+					</div>
+				</a>
+				<!-- **************************************** -->
+				<div style="display: inline-block;margin-left: 325px;height: 30px;">
+					<div class="input-group mb-3" style="margin: 0;">
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">所有类型</option>
+								<option>B 保温杯</option>
+								<option>B 煲</option>
+								<option>C 床单</option>
+								<option>C 床罩</option>
+								<option>D 电视机</option>
+								<option>D 电脑</option>
+								<option>D 电冰箱</option>
+								<option>D 电风扇</option>
+								<option>S 手机</option>
+								<option>S 摄像头</option>
+							</select>
+						</div>
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">所有品牌</option>
+								<option>A 安踏</option>
+								<option>A Apple</option>
+								<option>B 保时捷</option>
+								<option>B 包贝尔</option>
+								<option>H 海尔</option>
+								<option>H 华为</option>
+							</select>
+						</div>
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">全部</option>
+								<option>上架</option>
+								<option>下架</option>
+							</select>
+						</div>
+						<div class="input-group-prepend">
+							<select>
+								<option class="active">全部</option>
+								<option>新品</option>
+								<option>推荐</option>
+							</select>
+						</div>
+						<input type="text" class="form-control" aria-describedby="basic-addon2" style="width: 100px;height: 25px;" placeholder="搜索词...">
+						<div class="input-group-append" style="display: inline-block;">
+							<span class="input-group-text" id="basic-addon2" style="width: 75px;height: 25px;">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">搜索</font>
+								</font>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div style="overflow-x:auto;">
+				<div class="card-body" style="padding: 0;width: 1000px;">
+					<table class="table table-responsive-sm" style="margin-bottom: 0;">
+						<thead style="background: #F5F5F5;">
+							<tr>
+								<th style="width: 20px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">
+											<i class="fa fa-star-o"></i>
+										</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品编号</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 150px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品名称</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 350px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品规格</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 170px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品分类</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">商品品牌</font>
+									</font>
+								</th>
+								<th class="text-center" style="width: 100px;">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">库存</font>
+									</font>
+								</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				
+			<div style="padding: 5px 0;border-bottom: 1px solid #C8C8C8;">
+				<div style="display: inline-block;padding-left: 15px;">
+					<a href="" style="text-decoration:none;height: 40px;">
+						<div>
+							<button class="btn btn-outline-primary" style="width: 79px;height: 26px;padding: 1px 0 0 0;">
+								<span style="font-size: 12px;display: block;">
+									<i class="fa fa-plus"></i>批量修改
+								</span>
+							</button>
+						</div>
+					</a>
+				</div>
+				<div style="display: inline-block;">
+					<div style="text-align: center; width: 60px;">
+						<input type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+						 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" placeholder="数量">
+					</div>
+				</div>
+			</div>
+				
+				<div class="card-body" style="padding: 0 0 5px;width: 1000px;">
+					<table class="table table-responsive-sm">
+						<tbody>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center"  style="width: 20px;">
+									<i class="fa fa-star-o"></i>
+								</td>
+								<td class="text-center" style="width: 100px;">
+									1066
+								</td>
+								<td class="text-center" style="width: 150px;">
+									iphoneXS
+								</td>
+								<td class="text-center" style="width: 350px;">
+									选择版本:全网通4G+268G 选择颜色:死亡芭比粉
+								</td>
+								<td class="text-center" style="width: 170px;">
+									手机通讯
+								</td>
+								<td class="text-center" style="width: 100px;">
+									榴莲
+								</td>
+								<td class="text-center" style="width: 100px;">
+									<div style="text-align: center; width: 60px;">
+										<input style="margin-left: 10px;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"
+										 onblur="changeTableVal('goods_category','id','31','cat_group',this)" size="4" value="12">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="col-4 offset-4">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">上一页</font>
+									</font>
+								</a>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="#">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">1</font>
+									</font>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">2</font>
+									</font>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">3</font>
+									</font>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">4</font>
+									</font>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">下一个</font>
+									</font>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

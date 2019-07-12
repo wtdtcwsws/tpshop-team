@@ -1,0 +1,159 @@
+<style>
+	.shop-set-1{
+		font-weight: lighter;
+		font-size: 18px;
+		margin: 8px 0 0 0;
+		display: inline-block;
+		font-family: "黑体";
+	}
+	.shop-set-2{
+		font-size: 13px;
+		font-weight: 400;
+		position: relative;
+		top: -2px;
+		color: #818182;
+	}
+	.container-fluid>.row{
+		height: 50px;
+	}
+	.container-fluid>.content{
+		padding: 10px;
+		width: 100%;
+		background-color: white;
+		padding-top: 30px;
+	}
+	.content>.row{
+		padding-left: 10px;
+		margin-top: 15px;
+	}
+	.content-1{
+		font-size: 16px;
+	}
+	.content-2{
+		font-size: 11px;
+		font-weight: 400;
+		color: #818182;
+	}
+</style>
+<div class="animated fadeIn">
+	<div class="container-fluid">
+		<div class="row">
+			<div>
+				<span class="shop-set-1">
+					友情链接管理
+				</span>
+				<span class="shop-set-2">
+					网站系统友情链接索引与管理
+				</span>
+			</div>
+		</div>
+		<!-- 网页内容 -->
+		<div class="content">
+			<!-- 提示弹框按钮 -->
+			<div class="alert alert-info alert-dismissible fade show" role="alert">
+				<strong style="font-size: 20px;">操作提示</strong>
+				<table>
+					<ul>
+						<li>系统平台全局设置,包括基础设置、购物、短信、邮件、水印和分销等相关模块。</li>
+						<li>该页面的所有默认图标logo在"网站根目录/public/static/images/logo"目录下, 如果需要重新设计图标可参考默认图。</li>
+						<li>鼠标移到图片，右侧会显示该图片大概所在位置。</li>
+					</ul>
+				</table>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<!-- 网页中部 -->
+			<div class="row">
+				<div class="col-2">
+					<span class="content-1">友情链接列表</span>
+					<span class="content-2">（共6条记录）</span>
+				</div>
+				<div class="col-1" style="position: relative;top: -15px;">
+					<a href="#" title="刷新数据">
+						<i class="fa fa-refresh fa-lg mt-4 "></i>
+					</a>
+				</div>
+			</div>
+			<!-- 网页主体表格 -->
+			<table class="table table-hover text-center table-bordered">
+				<tr class="alert-secondary">
+					<th style="width: 15px;"><i class="fa fa-star-o fa-lg"></i></th>
+					<th style="width: 120px;">链接名称</th>
+					<th style="width: 500px;">链接地址</th>
+					<th style="width: 100px;">排序</th>
+					<th style="width: 120px;">新窗口打开</th>
+					<th style="width: 120px;">是否显示</th>
+					<th>操作</th>
+				</tr>
+
+				<tr>
+					<td colspan="7" class="text-left">
+						<a data-toggle="ajaxLoad" data-target="#ui-view" href="h-friendship-two.html"><button class="btn btn-outline-primary" type="button"><i class="fa fa-plus fa-lg"></i> 新增友情链接</button></a>
+					</td>
+				</tr>
+
+				<tr>
+					<td><i class="fa fa-star-o fa-lg"></i></td>
+					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text" value="https://www.taobao.com"></td>
+					<td><input class="form-control text-center" type="text" value="1"></td>
+					<td>
+						<label class="switch switch-label switch-pill switch-success">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="✓" data-unchecked="✕"></span>
+						</label>
+					</td>
+					<td>
+						<label class="switch switch-label switch-pill switch-success">
+							<input class="switch-input" type="checkbox" checked="">
+							<span class="switch-slider" data-checked="✓" data-unchecked="✕"></span>
+						</label>
+					</td>
+					<td>
+						<button class="btn btn-ghost-dark" type="button">
+							<i class="fa fa-edit fa-lg"></i>
+							编辑
+						</button>
+						<button class="btn btn-ghost-dark" type="button" data-toggle="modal" data-target="#smallModal">
+							<i class="icons font-1xl cui-trash"></i>
+							刪除
+						</button>
+					</td>
+				</tr>
+
+
+			</table>
+
+			<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;"
+			 aria-hidden="true">
+				<div class="modal-dialog modal-sm" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">信息</h4>
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>确认删除？</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+							<button class="btn btn-primary" type="button">确认</button>
+						</div>
+					</div>
+					<!-- /.modal-content-->
+				</div>
+				<!-- /.modal-dialog-->
+			</div>
+
+
+
+		</div>
+
+
+	</div>
+
+
+</div>

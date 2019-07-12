@@ -1,0 +1,97 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+
+	.head~div {
+		margin: 25px 0px;
+	}
+	.clear:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+</style>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gSale.html" data-toggle="ajaxLoad"
+				 data-target="#ui-view"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>优惠促销管理 - 添加与编辑商品促销活动</h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站系统编辑商品促销活动</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+	<form action="" method="post">
+		<div>
+			<label><span style="color: red;">*</span>促销活动名称</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">促销活动名称</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>促销活动类型</label>
+			<select name="">
+				<option value="">直接打折</option>
+				<option value="">减价优惠</option>
+				<option value="">降价销售</option>
+			</select>
+			<div style="font-size: 10px;padding-left: 150px;">促销活动类型</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>折扣</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">% 折扣值(1-100 如果打9折，请输入90)</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>限购数量</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">限购数量</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>开始时间</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">团购开始时间</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>结束时间</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">团购结束时间</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>宣传图片</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">请上传图片格式文件</div>
+		</div>
+		<hr />
+
+		<div>
+			<label  style="margin-top: 5px;float: left;"><span style="color: red;">*</span>选择优惠商品</label>
+			<div style="padding-left: 60px;margin-top: 5px;float: left;">
+				<a href=""style="padding: 3px; border: 1px solid #007EE5;border-radius: 2px;text-decoration: none;"><i class="fa fa-search"></i>选择商品</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<hr />
+		
+		<div style="position: relative;">
+			<label style="position: absolute;top: 0; ">活动描述</label><textarea rows="5" cols="50" class="offset-1" placeholder="请输入活动介绍"></textarea>
+			<div style="font-size: 10px;" class="offset-1">活动描述</div>
+		</div>
+		<hr />
+
+		<div>
+			<label>站内信通知</label>
+			<input type="radio" name="OF" id="1" value="" /><label for="1">是</label>
+			<input type="radio" name="OF" id="2" value="" /><label for="2">否</label>
+		</div>
+		<hr />
+		<input style="margin:20px 0px 20px 200px" type="submit" value="确认提交" class="btn btn-primary" />
+	</form>
+</div>

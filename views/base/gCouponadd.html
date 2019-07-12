@@ -1,0 +1,87 @@
+<style type="text/css">
+	input[type=text],
+	select {
+		position: absolute;
+		left: 150px;
+	}
+
+	.head~div {
+		margin: 25px 0px;
+	}
+	.clear:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+</style>
+<div class="animated fadeIn" style="position: relative;">
+	<div class="head">
+		<div style="pading:100px 10px;">
+			<div style="float: left;margin:auto 10px"><a href="base/gCoupon.html" data-toggle="ajaxLoad"
+				 data-target="#ui-view"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a></div>
+			<div style="float: left;">
+				<h5>优惠券管理 - 编辑优惠券</h5>
+			</div>
+			<div style="float: left;margin:auto 15px">
+				<h7>网站系统优惠券管理</h7>
+			</div>
+			<div style="content:'';display: block;clear: both;"></div>
+		</div>
+	</div>
+	<hr />
+	<form action="" method="post">
+		<div>
+			<label><span style="color: red;">*</span>优惠券名称</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">请填写优惠券名称</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>优惠券面额</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">优惠券可抵扣金额</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>消费金额</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">订单需满足的最低消费金额(必需为整数)才能使用</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>发放数量</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">发放数量限制(默认为0则无限制)</div>
+		</div>
+		<hr />
+		
+		<div>
+			<label><span style="color: red;">*</span>发放类型</label><label style="width: 80px;"></label>
+			<input type="radio" name="OF" id="1" value="" /><label for="1">下单赠送</label>
+			<input type="radio" name="OF" id="2" value="" /><label for="2">指定发放</label>
+			<input type="radio" name="OF" id="3" value="" /><label for="3">免费领取</label>
+			<input type="radio" name="OF" id="4" value="" /><label for="4">线下发放</label>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>使用起始日期</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">使用起始日期</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>使用结束日期</label><input type="text" />
+			<div style="font-size: 10px;padding-left: 150px;">使用结束日期</div>
+		</div>
+		<hr />
+		<div>
+			<label><span style="color: red;">*</span>发放类型</label><label style="width: 80px;"></label>
+			<input type="radio" name="user" id="1" value="" /><label for="1">全店通用</label>
+			<input type="radio" name="user" id="2" value="" /><label for="2">指定商品</label>
+			<input type="radio" name="user" id="3" value="" /><label for="3">指定分类</label>
+		</div>
+		<hr />
+		<div>
+			<label>状态</label><label style="width: 120px;"></label>
+			<input type="radio" name="yes" id="1" value="" /><label for="1">有效</label>
+			<input type="radio" name="yes" id="2" value="" /><label for="2">无效</label>
+		</div>
+		<hr />
+		<input style="margin:20px 0px 20px 200px" type="submit" value="确认提交" class="btn btn-primary" />
+	</form>
+</div>

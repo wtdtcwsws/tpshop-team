@@ -1,0 +1,413 @@
+<script src="js/zhang.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="container" style="background-color: #FFFFFF;">
+	<div style="display: inline-block;">
+		<h5 style="font-size: 16px; padding: 6px 0;margin: 3px 0 0 0;width: 530px;display: inline-block;">退货退款管理<small class="text-muted"
+			 style="margin-left: 10px;">商品订单退货申请及审核处理</small>
+		</h5>
+	</div>
+	<div style="border-radius: 5px;background-color: #EBF8FB;width: 100%;height: 85px;">
+		<div id="Operation-Tips" style="padding: 5px 15px;margin-bottom: 8px;cursor: pointer;">
+			<i class="fa fa-lightbulb-o" style="cursor: pointer;"></i>
+			<h5 style="font-size: 14px;margin: 0;display: inline-block;color: #0ba4da;cursor: pointer;" title="提示相关设置操作时应注意的要求">提示操作</h5>
+		</div>
+		<ul style="list-style:none;padding-left: 20px;margin-bottom: 0;">
+			<li style="font-size: 12px;margin-bottom: 4px;color: #748A8F;">买家提交的退货申请, 商家同意并平台审核通过之后, 以余额的方式返回到用户账户上</li>
+		</ul>
+	</div>
+	<div class="row" style="padding-bottom: 8px;">
+		<div class="col-5" style="margin-top: 10px;display: inline-block;">
+			<h5 style="font-size: 16px;display: inline-block;margin: 0 10px 0 0;bottom: 0;">待处理的线上实物交易订单退货列表
+				<small class="text-muted" style="margin-left: 5px;">(共54条记录) </small>
+			</h5>
+			<a href="" style="color: #999999;">
+				<div style="display: inline-block;padding: 3px 0;">
+					<i class="fa fa-refresh"></i>
+				</div>
+			</a>
+		</div>
+		<div class="col-2"></div>
+		<div class="col-5" style="margin-top: 10px;display: inline-block;height: 30px;">
+			<div class="input-group mb-3" style="margin: 0;">
+				<input style="width: 60;height: 25px;margin-right: 5px;" placeholder="处理状态" />
+				<input style="width: 60;height: 25px;margin-right: 5px;" placeholder="订单编号" />
+				<button type="button" style="width: 56px;height: 25px;">搜索</button>
+			</div>
+		</div>
+	</div>
+	<div>
+		<!-- ************************************** -->
+		<div style="width: 100%;">
+
+			<table class="table table-responsive-sm table-sm" style="margin: 0;">
+				<thead style="background-color: #F5F5F5;">
+					<tr>
+						<th style="text-align: center;width: width: 27px;">
+							<i class="fa fa-star-o"></i>
+						</th>
+						<th style="text-align: center;width: 160px;">
+							订单编号
+						</th>
+						<th style="text-align: center;width: 200px;">
+							商品名称
+						</th>
+						<th style="text-align: center;width: 60px;">
+							类型
+						</th>
+						<th style="text-align: center;width: 160px;">
+							申请日期
+						</th>
+						<th style="text-align: center;width: 80px;">
+							状态
+						</th>
+						<th style="text-align: center;width: 160px;">
+							操作
+						</th>
+					</tr>
+				</thead>
+			
+				<tbody>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;width: 34px;">
+							<i class="fa fa-star-o"></i>
+						</td>
+						<td style="text-align: center;">
+							201804271017075618
+						</td>
+						<td style="text-align: center;">	
+							多规格衣服的的快递
+						</td>
+						<td style="text-align: center;">
+							退货退款
+						</td>
+						<td style="text-align: center;">
+							2018-04-27 17:52
+						</td>
+						<td style="text-align: center;">
+							退款完成
+						</td>
+						<td style="text-align: center;">
+							<a href="javascript:;" data-id="9" class="btn blue type_info" style="padding: 0 6px;" data-toggle="ajaxLoad" data-target="#ui-view">
+								<i class="fa fa-list-alt"></i>查看
+							</a>
+							<a href="javascript:;" data-id="9" class="btn red delete_type" style="padding: 0 6px;"><i class="fa fa-trash-o"></i>删除</a>
+						</td>
+					</tr>
+					
+					
+				</tbody>
+			</table>
+			
+		</div>
+		<!-- ************************************** -->
+		<div class="row">
+			<div class="col-4 offset-4">
+				<ul class="pagination">
+					<li class="page-item active">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">1</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">2</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">3</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">4</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">5</font>
+							</font>
+						</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">下一个</font>
+							</font>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div>
